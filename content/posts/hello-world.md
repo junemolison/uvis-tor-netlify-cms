@@ -1,53 +1,23 @@
 ---
-title: Hello World!
+title: Участие в программе «Дачный Ответ»
 status: Featured / Published
-date: '2018-03-27'
-postFeaturedImage: /images/uploads/tim-marshall-155597.jpg
+date: '2018-10-29'
+postFeaturedImage: /images/uploads/1.jpg
 excerpt: >-
   Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
   interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
   est, lobortis ac efficitur vitae, posuere a mauris. Phasellus ac dui
   pellentesque, lacinia risus ut, imperdiet eros.
 categories:
-  - category: News
+  - category: Обновления
 meta:
   canonicalLink: ''
   description: ''
   noindex: false
   title: ''
 ---
+«Мастер Защиты» — участник передачи «Дачный Ответ» на НТВ: [подробнее](http://www.peredelka.tv/do/archive/gostinaya-s-fioletovim-kantom/)
 
-Paragraphs are separated by a blank line.
+«Дачный ответ» переделал гостиную сложной формы. Пришлось все как следует продумать, ведь одна часть семьи мечтала о рюшах и ламбрекенах, а вторая была категорически против. Найти золотую середину помог павловопосадский платок с фиолетовым кантом.
 
-The second paragraph. This is placeholder text that our web designers put here to make sure words appear properly on your website. _Italic_, **bold**, and `monospace`.
-
-### Unordered lists:
-
-* this one
-* that one
-* the other one
-
-### Ordered lists:
-
-1.  first item
-1.  second item
-1.  third item
-
-> Block quotes are written like so.
->
-> They can span multiple paragraphs,
-> if you like.
-
-## Heading 2
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9bU0V1s0v4?controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
