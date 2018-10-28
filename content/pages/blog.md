@@ -1,4 +1,6 @@
 ---
-title: Blog
-featuredImage: /images/uploads/ng-32703.jpg
+title: Новости
+featuredImage: /images/uploads/2.jpg
+subtitle: Торговый Дом «Мастер Защиты»
 ---
+
