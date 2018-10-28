@@ -1,18 +1,11 @@
 ---
-title: Contact us
-subtitle: ''
-featuredImage: '/images/uploads/mark-chang-74-3.jpg'
-address: 404 James St, Burleigh Heads QLD 4220
-phone: 0987 123 456
-email: example@example.com
+title: О нас
+featuredImage: /images/uploads/1.jpg
+subtitle: Торговый Дом «Мастер Защиты»
+address: 'ТК “Ланской”, ул. Студенческая 10, 2 этаж, модуль В34'
+phone: +7 (903) 66 99 010
+email: tdmasterdefender@gmail.com
 ---
+# Возникли вопросы?
 
-# Example contact form
-
-This form is setup to use Netlify's form handling:
-
-* the form action is set to the current absolute url: `action: '/contact/'`
-* a name attribute is sent with the form's data `'form-name': 'Contact'`
-* netlify data attributes are added to the form `data-netlify data-netlify-honeypot`
-
-Find out more in the [Netlify Docs](https://www.netlify.com/docs/form-handling/).
+Оставь заявку, и мы свяжемся с Вами
