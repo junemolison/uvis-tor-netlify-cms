@@ -1,32 +1,43 @@
 ---
-title: About page title
-featuredImage: /images/uploads/tim-marshall-155597.jpg
-section1: |-
-  ## Lorem Ipsum
+title: О нас
+featuredImage: /images/uploads/1.jpg
+subtitle: Торговый Дом «Мастер Защиты»
+section1: >-
+  ## Изготовление
 
-  Netlify CMS works with both `.md` and `.json`.
 
-  ![Image test](/images/uploads/isabella juskova.jpg)
+  Торгово-производственная компания «Мастер Защиты» производит входные
+  металлические и деревянные двери, межкомнатные двери и мебель по Вашим
+  эскизам, предметы интерьера и стеновые панели, жалюзийные ставни (шаттерсы),
+  изделия из искусственного камня (Corian, Staron, Montelli)
+section2: >-
+  ## Все, что чертится, все производится
 
-  [Link test](/images/uploads/isabella juskova.jpg)
 
-  ### Embed Test
+  Ваши входные двери могут быть любых форм и конфигураций:
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Js00yn142ic" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-section2: |-
-  ## This is a Container component
+  * арочные и прямоугольные
 
-  A sem vel nec sodales mi vivamus senectus sed potenti a parturient nascetur
-  tincidunt nisi pulvinar rhoncus a. Risus imperdiet taciti suspendisse facilisi
-  a per metus cubilia varius a nostra adipiscing amet ultrices quisque ac mi a.
-  Dictumst a ultrices mi a dignissim ad fermentum eget a nam et a blandit
-  scelerisque. Taciti lorem tempor quam vestibulum dis habitasse vestibulum diam
-  vel est ut proin dis auctor. Suscipit scelerisque orci magna interdum vel
-  bibendum duis netus a consectetur dui magnis ac aliquet sem posuere tincidunt
-  vestibulum.
+  * одностворчатые и двустворчатые
 
-  The image below will have a `srcset` attribute generated:
+  * с карнизами и доборами
 
-  ![Tim Marshall](/images/uploads/tim-marshall-155597.jpg)
+  * с фрамугами и боковинами
+
+  * со стеклопакетами и витражами
+
+  * с коваными элементами
+
+  * чеканкой и т.д.
+
+
+  Также и с декоративными панелями – создаются они по Вашему образцу (чертеж,
+  рисунок, фото)
+
+
+  Ассортимент ограничен только Вашей фантазией. Стоимость каждой двери
+  просчитывается индивидуально, что позволяет «вписаться» в практически любой
+  бюджет (с учетом Ваших интересов)
 ---
+
