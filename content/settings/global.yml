@@ -1,12 +1,13 @@
-siteTitle: Netlify CMS + React Starter
+siteTitle: Торговый Дом «Мастер Защиты»
 siteUrl: 'https://tda-mz.netlify.com'
 siteDescription: >-
-  A starter project for creating lightning-fast, offline-first websites with
-  Netlify CMS and React.
+  Торгово-производственная компания «Мастер Защиты» производит входные
+  металлические и деревянные двери, межкомнатные двери и мебель по Вашим
+  эскизам, предметы интерьера и стеновые панели, жалюзийные ставни (шаттерсы),
+  изделия из искусственного камня (Corian, Staron, Montelli)
 socialMediaCard:
   image: /images/uploads/card-og.png
   twitterCreatorAccount: '@beraliv'
-  twitterSiteAccount: ''
-headerScripts: |-
-  <!-- Add your analytics scripts / verification meta here -->
-enableServiceWorker: false
+  twitterSiteAccount: '@tda_mz'
+headerScripts: <!-- Add your analytics scripts / verification meta here -->
+enableServiceWorker: true
