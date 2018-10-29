@@ -1,7 +1,6 @@
 import React from 'react'
 
 import PageHeader from '../components/PageHeader'
-import LazyImage from '../components/LazyImage'
 import Content from '../components/Content.js'
 import './About.css'
 

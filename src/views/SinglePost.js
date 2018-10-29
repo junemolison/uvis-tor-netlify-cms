@@ -21,7 +21,7 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
 
       <div className='container skinny'>
         <Link className='SinglePost--BackButton' to='/blog/'>
-          <ChevronLeft /> BACK
+          <ChevronLeft /> Назад
         </Link>
         <div className='SinglePost--Content relative'>
           <div className='SinglePost--Meta'>
@@ -50,7 +50,7 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
                 className='SinglePost--Pagination--Link prev'
                 to={prevPostURL}
               >
-                Previous Post
+                К предыдущей новости
               </Link>
             )}
             {nextPostURL && (
@@ -58,7 +58,7 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
                 className='SinglePost--Pagination--Link next'
                 to={nextPostURL}
               >
-                Next Post
+                К следующей новости
               </Link>
             )}
           </div>

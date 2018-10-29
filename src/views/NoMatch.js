@@ -8,9 +8,9 @@ const NoMatch = ({ siteUrl }) => (
   <div className='NoMatch'>
     <section className='section thick'>
       <div className='container taCenter'>
-        <h1>404 - Page Not Found</h1>
+        <h1>404 - Страница не найдена</h1>
         <p>
-          We can't find the page you are looking for!<br />Head back to{' '}
+          Мы не можем найти страницу, которую Вы ищете!<br />Обратно на домашнюю страницу{' '}
           <a href={siteUrl}>
             {siteUrl.replace(/(^https?:\/\/)/, '').replace(/\/$/, '')}
           </a>
@@ -18,7 +18,7 @@ const NoMatch = ({ siteUrl }) => (
       </div>
     </section>
     <Helmet>
-      <title>404 – Page Not Found</title>
+      <title>404 – Страница не найдена</title>
       <body className='body--NoMatch' />
     </Helmet>
   </div>
