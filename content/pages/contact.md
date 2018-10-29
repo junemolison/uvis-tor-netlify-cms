@@ -1,5 +1,5 @@
 ---
-title: О нас
+title: Контакты
 featuredImage: /images/uploads/1.jpg
 subtitle: Торговый Дом «Мастер Защиты»
 address: 'ТК “Ланской”, ул. Студенческая 10, 2 этаж, модуль В34'
