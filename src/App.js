@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import ScrollToTop from './components/ScrollToTop'
 import Meta from './components/Meta'
 import Home from './views/Home'
-import About from './views/About'
+import Gallery from './views/Gallery'
 import Blog from './views/Blog'
 import SinglePost from './views/SinglePost'
 import Contact from './views/Contact'
@@ -93,10 +93,10 @@ class App extends Component {
               fields={this.getDocument('pages', 'home')}
             />
             <RouteWithMeta
-              path='/about/'
+              path='/gallery/'
               exact
-              component={About}
-              fields={this.getDocument('pages', 'about')}
+              component={Gallery}
+              fields={this.getDocument('pages', 'gallery')}
             />
             <RouteWithMeta
               path='/contact/'

@@ -3,7 +3,7 @@ import React from 'react'
 import '../src/globalStyles.css'
 import data from '../src/data.json'
 import Home from '../src/views/Home'
-import About from '../src/views/About'
+import Gallery from '../src/views/Gallery'
 import Contact from '../src/views/Contact'
 import Blog from '../src/views/Blog'
 import SinglePost from '../src/views/SinglePost'
@@ -27,8 +27,8 @@ const posts = getDocuments('posts')
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <Home fields={entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('about-page', ({ entry }) => (
-  <About fields={entry.toJS().data} />
+CMS.registerPreviewTemplate('gallery-page', ({ entry }) => (
+  <Gallery fields={entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <Contact fields={entry.toJS().data} siteTitle={globalSettings.siteTitle} />

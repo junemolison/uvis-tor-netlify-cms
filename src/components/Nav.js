@@ -11,8 +11,8 @@ export default ({ handlePopupOpen }) => (
       <Link to='/'>
         <Logo />
       </Link>
-      <NavLink to='/about/' exact>
-        О нас
+      <NavLink to='/gallery/' exact>
+        Галерея
       </NavLink>
       <NavLink to='/blog/' exact>
         Новости
