@@ -55,9 +55,21 @@ collections: # A list of collections the CMS should be able to edit
       - file: "content/pages/gallery.md"
         label: "Gallery"
         name: "gallery-page"
+        editor:
+          preview: true
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: markdown}
           - {label: Featured Image, name: featuredImage, widget: image}
+          - label: "Gallery Carousels"
+            name: "galleryCarousels"
+            widget: "list"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - label: "Images"
+                name: "images"
+                widget: "list"
+                field: {label: Image, name: image, widget: image}
           - label: "Meta"
             required: false
             name: "meta"

@@ -1,14 +1,14 @@
 ---
 title: Галерея
+subtitle: Торговый Дом «Мастер Защиты»
 featuredImage: /images/uploads/1.jpg
-galleryImages:
+galleryCarousels:
 - title: Входные двери
   images:
-  - /images/uploads/1.jpg
-  - /images/uploads/2.jpg
+  - image: /images/uploads/1.jpg
+  - image: /images/uploads/2.jpg
 - title: Ставни
   images:
-  - /images/uploads/1.jpg
-  - /images/uploads/2.jpg
-subtitle: Торговый Дом «Мастер Защиты»
-
+  - image: /images/uploads/1.jpg
+  - image: /images/uploads/2.jpg
+---

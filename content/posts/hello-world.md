@@ -3,11 +3,7 @@ title: Участие в программе «Дачный Ответ»
 status: Featured / Published
 date: '2018-10-29'
 postFeaturedImage: /images/uploads/1.jpg
-excerpt: >-
-  Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
-  interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
-  est, lobortis ac efficitur vitae, posuere a mauris. Phasellus ac dui
-  pellentesque, lacinia risus ut, imperdiet eros.
+excerpt: «Мастер Защиты» — участник передачи «Дачный Ответ»
 categories:
   - category: Обновления
 meta:
