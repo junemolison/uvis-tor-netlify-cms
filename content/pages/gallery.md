@@ -5,7 +5,7 @@ featuredImage: /images/uploads/1.jpg
 galleryCarousels:
   - images:
       - /images/uploads/_k9a7299.jpg
-      - /images/uploads/_k9a7300.jpg
+      - /images/uploads/dv2.jpg
       - /images/uploads/_k9a7301.jpg
       - /images/uploads/_k9a7302.jpg
     title: Дачный ответ
