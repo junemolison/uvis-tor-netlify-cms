@@ -7,7 +7,9 @@ siteDescription: >-
   изделия из искусственного камня (Corian, Staron, Montelli)
 socialMediaCard:
   image: /images/uploads/2.jpg
-  twitterCreatorAccount: '@beraliv'
-  twitterSiteAccount: '@tda_mz'
+  instagram: '@masterdefender'
+  facebook: '@tdmasterdefender'
+  whatsapp: '+7 (903) 669-90-10'
+  whatsappMessage: 'Николай, здравствуйте!'
 headerScripts: <!-- Add your analytics scripts / verification meta here -->
 enableServiceWorker: true

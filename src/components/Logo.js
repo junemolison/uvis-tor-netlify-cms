@@ -2,11 +2,12 @@ import React from 'react'
 
 import './Logo.css'
 
-export default ({ inverted }) => (
+export default ({ src = '/images/logo.svg' }) => (
   <div
     className='Logo'
     style={{
-      backgroundImage: 'url(/images/logo.svg)'
+      backgroundImage: `url(${src})`
     }}
+    role='button'
   />
 )

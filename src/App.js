@@ -74,11 +74,8 @@ class App extends Component {
               socialMediaCard.image &&
               siteUrl + socialMediaCard.image
             }
-            twitterCreatorAccount={
-              socialMediaCard && socialMediaCard.twitterCreatorAccount
-            }
-            twitterSiteAccount={
-              socialMediaCard && socialMediaCard.twitterSiteAccount
+            twitter={
+              socialMediaCard && socialMediaCard.twitter
             }
           />
 
@@ -152,7 +149,7 @@ class App extends Component {
 
             <Route render={() => <NoMatch siteUrl={siteUrl} />} />
           </Switch>
-          <Footer />
+          <Footer socialMediaCard={socialMediaCard} />
         </div>
       </Router>
     )

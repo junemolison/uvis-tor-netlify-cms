@@ -2,3 +2,12 @@
   padding: 3rem 0;
   background: var(--lightGrey);
 }
+
+.Footer .Link {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.Footer .Footer--License {
+  display: none;
+}

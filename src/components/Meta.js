@@ -11,8 +11,8 @@ const Meta = props => {
     url,
     description,
     absoluteImageUrl,
-    twitterSiteAccount,
-    twitterCreatorAccount,
+    twitter,
+    facebook,
     headerScripts,
     noindex,
     canonicalLink
@@ -43,11 +43,14 @@ const Meta = props => {
       {absoluteImageUrl && (
         <meta property='og:image' content={absoluteImageUrl} />
       )}
-      {twitterSiteAccount && (
-        <meta name='twitter:site' content={twitterSiteAccount} />
+      {twitter && (
+        <meta name='twitter:site' content={twitter} />
       )}
-      {twitterCreatorAccount && (
-        <meta name='twitter:creator' content={twitterCreatorAccount} />
+      {twitter && (
+        <meta name='twitter:creator' content={twitter} />
+      )}
+      {facebook && (
+        <meta name='fb:admins' content={facebook} />
       )}
       {noindex && <meta name='robots' content='noindex' />}
       {canonicalLink && <link rel='canonical' href={canonicalLink} />}
