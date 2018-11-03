@@ -7,6 +7,7 @@ galleryCarousels:
       - /images/uploads/_k9a7299.jpg
       - /images/uploads/_k9a7300.jpg
       - /images/uploads/_k9a7301.jpg
+      - /images/uploads/_k9a7302.jpg
     title: Дачный ответ
   - images:
       - /images/uploads/1.jpg
