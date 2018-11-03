@@ -8,8 +8,8 @@ galleryCarousels:
       - /images/uploads/_k9a7300.jpg
     title: Дачный ответ
   - images:
-      - image: /images/uploads/1.jpg
-      - image: /images/uploads/2.jpg
+      - /images/uploads/1.jpg
+      - /images/uploads/2.jpg
     title: Ставни
 ---
 

@@ -20,7 +20,7 @@ export default class Carousel extends React.Component {
       <div className='container'>
         <h1>{ title }</h1>
         <SwipeableViews index={index} onChangeIndex={this.handleIndexChange}>
-          {images.map(({ image }, index) => (
+          {images.map((image, index) => (
             image && (
               <LazyImage
                 key={`Carousel-${index}`}

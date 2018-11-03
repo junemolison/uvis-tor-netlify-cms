@@ -69,7 +69,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Images"
                 name: "images"
                 widget: "list"
-                field: {label: Image, name: image, widget: image}
+                field: {widget: image}
           - label: "Meta"
             required: false
             name: "meta"
