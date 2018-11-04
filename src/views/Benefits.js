@@ -21,7 +21,7 @@ export default ({ fields }) => {
               className='Benefit'
               key={`benefit-${key}`}
             >
-              <LazyImage src={image} />
+              <LazyImage src={image} alt={`benifit-${key}`} />
               <Content source={body} />
             </div>
           ))}

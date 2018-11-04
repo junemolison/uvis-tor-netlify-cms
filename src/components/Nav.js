@@ -14,6 +14,9 @@ export default ({ handlePopupOpen }) => (
       <NavLink to='/gallery/' exact>
         Галерея
       </NavLink>
+      <NavLink to='/benefits/' exact>
+        Преимущества
+      </NavLink>
       <NavLink to='/blog/' exact>
         Новости
       </NavLink>
