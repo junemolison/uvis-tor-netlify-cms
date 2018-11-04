@@ -181,5 +181,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Instagram, name: instagram, widget: string, required: false}
               - {label: Facebook, name: facebook, widget: string, required: false}
               - {label: VKontakte, name: vkontakte, widget: string, required: false}
+              - {label: WhatsApp, name: whatsapp, widget: string, required: false}
+              - {label: WhatsApp Message, name: whatsappMessage, widget: string, required: false}
           - {label: Header Meta / Scripts, name: headerScripts, widget: text, required: false}
           - {label: Enable Service Worker Pre-Cache, name: enableServiceWorker, widget: boolean, required: false}

@@ -6,10 +6,13 @@ siteDescription: >-
   эскизам, предметы интерьера и стеновые панели, жалюзийные ставни (шаттерсы),
   изделия из искусственного камня (Corian, Staron, Montelli)
 socialMediaCard:
+  facebook: '@tdmasterdefender'
   image: /images/uploads/2.jpg
   instagram: '@masterdefender'
-  facebook: '@tdmasterdefender'
   whatsapp: '+7 (903) 669-90-10'
   whatsappMessage: 'Николай, здравствуйте!'
-headerScripts: <!-- Add your analytics scripts / verification meta here -->
+headerScripts: |-
+  <!-- Add your analytics scripts / verification meta here -->
+  <!-- Yandex webmaster -->
+  <meta name="yandex-verification" content="a56ff224a02ed945" />
 enableServiceWorker: true
