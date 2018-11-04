@@ -4,6 +4,7 @@ import '../src/globalStyles.css'
 import data from '../src/data.json'
 import Home from '../src/views/Home'
 import Gallery from '../src/views/Gallery'
+import Benefits from '../src/views/Benefits'
 import Contact from '../src/views/Contact'
 import Blog from '../src/views/Blog'
 import SinglePost from '../src/views/SinglePost'
@@ -29,6 +30,9 @@ CMS.registerPreviewTemplate('home-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('gallery-page', ({ entry }) => (
   <Gallery fields={entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('benefits-page', ({ entry }) => (
+  <Benefits fields={entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <Contact fields={entry.toJS().data} siteTitle={globalSettings.siteTitle} />

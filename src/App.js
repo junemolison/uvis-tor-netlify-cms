@@ -6,6 +6,7 @@ import ScrollToTop from './components/ScrollToTop'
 import Meta from './components/Meta'
 import Home from './views/Home'
 import Gallery from './views/Gallery'
+import Benefits from './views/Benefits'
 import Blog from './views/Blog'
 import SinglePost from './views/SinglePost'
 import Contact from './views/Contact'
@@ -94,6 +95,12 @@ class App extends Component {
               exact
               component={Gallery}
               fields={this.getDocument('pages', 'gallery')}
+            />
+            <RouteWithMeta
+              path='/benefits/'
+              exact
+              component={Benefits}
+              fields={this.getDocument('pages', 'benefits')}
             />
             <RouteWithMeta
               path='/contact/'
