@@ -30,6 +30,7 @@
     "sw-precache": "^5.2.0"
   },
   "dependencies": {
+    "@material-ui/core": "^3.4.0",
     "@researchgate/react-intersection-observer": "^0.7.0",
     "classnames": "^2.2.6",
     "core-js": "^2.5.3",

@@ -22,6 +22,22 @@
   margin: 6px 0;
 }
 
+.Nav--Drawer {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.Nav--Drawer .Link {
+  display: flex;
+  justify-content: center;
+  margin: 17px 0;
+}
+
+.Nav--Drawer .NavLink {
+  margin: 0.5rem 1rem;
+}
+
 .Nav--Desktop {
   display: flex;
 }
