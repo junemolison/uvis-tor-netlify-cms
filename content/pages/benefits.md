@@ -1,5 +1,5 @@
 ---
-title: Уникальность
+title: Почему мы
 featuredImage: /images/uploads/1.jpg
 subtitle: Торговый Дом «Мастер Защиты»
 benefits:

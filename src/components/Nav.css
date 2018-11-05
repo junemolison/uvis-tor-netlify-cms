@@ -11,6 +11,37 @@
   height: 6rem;
 }
 
+.Nav--Container .Nav--Sandwich {
+  display: none;
+}
+
+.Nav--Container .Nav--Sandwich div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.Nav--Desktop {
+  display: flex;
+}
+
 .Nav .Link {
   margin-right: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .Nav--Container .Nav--Sandwich {
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .Nav--Desktop {
+    display: none;
+  }
+
+  .Nav .Link {
+    margin-right: 0;
+  }
 }
