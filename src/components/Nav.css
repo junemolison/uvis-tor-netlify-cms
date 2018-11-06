@@ -25,17 +25,17 @@
 .Nav--Drawer {
   display: flex;
   justify-content: center;
-  width: 300px;
 }
 
 .Nav--Drawer .Link {
   display: flex;
   justify-content: center;
-  margin: 17px 0;
+  margin: 2rem 0;
 }
 
 .Nav--Drawer .NavLink {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 4rem;
+  text-align: center;
 }
 
 .Nav--Desktop {
@@ -50,7 +50,7 @@
   .Nav--Container .Nav--Sandwich {
     display: block;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 3rem;
   }
 
   .Nav--Desktop {
@@ -58,6 +58,8 @@
   }
 
   .Nav .Link {
-    margin-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

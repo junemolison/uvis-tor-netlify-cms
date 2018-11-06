@@ -48,7 +48,7 @@ export default class Nav extends React.Component {
           variant='temporary'
           anchor='left'
           open={open}
-          classes={{}}
+          transitionDuration={{ enter: 100, exit: 100 }}
           onBlur={this.handleClose}
         >
           <Link className='Link' to='/'>
