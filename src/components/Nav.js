@@ -9,6 +9,12 @@ import NavLink from './NavLink'
 import Sandwich from './Sandwich'
 import './Nav.css'
 
+const AccessibleLink = ({ alt, children, ...props }) => (
+  <Link alt={alt} aria-label={alt} {...props}>
+    {children}
+  </Link>
+)
+
 export default class Nav extends React.Component {
   state = {
     open: false
@@ -25,9 +31,9 @@ export default class Nav extends React.Component {
       <nav className='Nav'>
         <div className='Nav--Container container'>
           <Sandwich handleOpen={this.handleOpen} />
-          <Link className='Link' to='/'>
+          <AccessibleLink alt='Link to Home' className='Link' to='/'>
             <Logo />
-          </Link>
+          </AccessibleLink>
           <div className='Nav--Desktop'>
             <NavLink to='/gallery/' exact>
               Галерея
@@ -51,9 +57,9 @@ export default class Nav extends React.Component {
           transitionDuration={{ enter: 100, exit: 100 }}
           onBlur={this.handleClose}
         >
-          <Link className='Link' to='/'>
+          <AccessibleLink alt='Link to Home' className='Link' to='/'>
             <Logo />
-          </Link>
+          </AccessibleLink>
           <Divider />
           <NavLink to='/gallery/' exact>
             Галерея

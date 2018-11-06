@@ -11,9 +11,9 @@ class Form extends React.Component {
     name: 'Simple Form Ajax',
     subject: '', // optional subject of the notification email
     action: '',
-    successMessage: 'Thanks for your enquiry, we will get back to you soon',
+    successMessage: 'Спасибо за запрос, мы скоро ответим Вам',
     errorMessage:
-      'There is a problem, your message has not been sent, please try contacting us via email'
+      'Возникла проблема, Ваше сообщение не доставлено, пожалуйста, свяжитесь с нами по почте'
   }
 
   state = {
@@ -71,6 +71,7 @@ class Form extends React.Component {
         )}
         <label className='EnquiryForm--Label'>
           <input
+            aria-label='Имя'
             className='EnquiryForm--Input'
             type='text'
             placeholder='Имя'
@@ -80,6 +81,7 @@ class Form extends React.Component {
         </label>
         <label className='EnquiryForm--Label'>
           <input
+            aria-label='Электронная почта'
             className='EnquiryForm--Input'
             type='email'
             placeholder='Электронная почта'
@@ -89,6 +91,7 @@ class Form extends React.Component {
         </label>
         <label className='EnquiryForm--Label'>
           <textarea
+            aria-label='Сообщение'
             className='EnquiryForm--Input EnquiryForm--Textarea'
             placeholder='Сообщение'
             name='message'
@@ -100,6 +103,7 @@ class Form extends React.Component {
         {!!subject && <input type='hidden' name='subject' value={subject} />}
         <input type='hidden' name='form-name' value={name} />
         <input
+          aria-label='Оставить заявку'
           className='Button EnquiryForm--SubmitButton'
           type='submit'
           value='Оставить заявку'

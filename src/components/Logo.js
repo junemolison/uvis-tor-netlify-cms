@@ -8,6 +8,5 @@ export default ({ src = '/images/logo.svg' }) => (
     style={{
       backgroundImage: `url(${src})`
     }}
-    role='button'
   />
 )

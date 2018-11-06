@@ -10,10 +10,11 @@ class PaginationDot extends React.Component {
   };
 
   render () {
-    const { active } = this.props
+    const { active, label } = this.props
 
     return (
       <button
+        aria-label={label || 'pagination dot'}
         type='button'
         className='PaginationDot'
         onClick={this.handleClick}
@@ -30,6 +31,7 @@ class PaginationDot extends React.Component {
 PaginationDot.propTypes = {
   active: PropTypes.bool.isRequired,
   index: PropTypes.number.isRequired,
+  label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 }
 

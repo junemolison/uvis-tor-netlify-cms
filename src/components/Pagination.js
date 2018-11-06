@@ -4,6 +4,16 @@ import PaginationDot from './PaginationDot'
 
 import './Pagination.css'
 
+const numberify = n => {
+  return n === 1
+    ? 'st'
+    : n === 2
+      ? 'nd'
+      : n === 3
+        ? 'rd'
+        : 'th'
+}
+
 class Pagination extends React.Component {
   handleClick = (_, index) => {
     this.props.onChangeIndex(index)
@@ -20,14 +30,20 @@ class Pagination extends React.Component {
           key={i}
           index={i}
           active={i === index}
+          label={`${i + 1}${numberify(i + 1)} image`}
           onClick={this.handleClick}
         />
       )
     }
 
-    return <div className='Pagination'>
-      {children}
-    </div>
+    return (
+      <div
+        className='Pagination'
+        role='navigation'
+      >
+        {children}
+      </div>
+    )
   }
 }
 
