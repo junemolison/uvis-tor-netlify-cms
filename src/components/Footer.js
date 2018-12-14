@@ -7,19 +7,31 @@ import './Footer.css'
 const removeAtSign = str => str.slice(1)
 const removeNonNumbers = str => str.replace(/[^\w]/g, '')
 
-const LogoLink = ({ alt, className, href, logo }) => (
-  <a
-    aria-label={alt}
-    alt={alt}
-    className={className}
-    href={href}
-    target='_blank'
-    rel='noopener noreferrer'
-    role='button'
-  >
-    <Logo src={logo} />
-  </a>
-)
+class LogoLink extends React.Component {
+  state = {
+    hover: false
+  }
+
+  render () {
+    const { alt, className, href, logo, hoverLogo } = this.props
+
+    return (
+      <a
+        aria-label={alt}
+        alt={alt}
+        className={className}
+        href={href}
+        target='_blank'
+        rel='noopener noreferrer'
+        role='button'
+        onMouseEnter={() => this.setState({ hover: true })}
+        onMouseLeave={() => this.setState({ hover: false })}
+      >
+        <Logo src={this.state.hover ? hoverLogo : logo} />
+      </a>
+    )
+  }
+}
 
 export default ({ globalSettings, socialMediaCard, navLinks }) => {
   const { twitter, facebook, instagram, vkontakte, whatsapp, whatsappMessage } = socialMediaCard
@@ -38,6 +50,7 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
               className='Link Link--Twitter'
               href={`https://twitter/${twitter}`}
               logo='/images/tw.svg'
+              hoverLogo='/images/tw-hover.svg'
             />
           )}
           {vkontakte && (
@@ -46,6 +59,7 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
               className='Link Link--VKontakte'
               href={`https://vk.com/${removeAtSign(vkontakte)}`}
               logo='/images/vk.svg'
+              hoverLogo='/images/vk-hover.svg'
             />
           )}
           {facebook && (
@@ -54,6 +68,7 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
               className='Link Link--Facebook'
               href={`https://www.facebook.com/${removeAtSign(facebook)}`}
               logo='/images/fb.svg'
+              hoverLogo='/images/fb-hover.svg'
             />
           )}
           {instagram && (
@@ -62,6 +77,7 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
               className='Link Link--Instagram'
               href={`https://www.instagram.com/${removeAtSign(instagram)}`}
               logo='/images/ig.svg'
+              hoverLogo='/images/ig-hover.svg'
             />
           )}
           {whatsapp && (
@@ -70,6 +86,7 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
               className='Link Link--WhatsApp'
               href={`https://wa.me/${removeNonNumbers(whatsapp)}${textToWhatsApp}`}
               logo='/images/wa.svg'
+              hoverLogo='/images/wa-hover.svg'
             />
           )}
         </div>
