@@ -13,7 +13,12 @@ class LogoLink extends React.Component {
   }
 
   render () {
-    const { alt, className, href, logo, hoverLogo } = this.props
+    const { hover } = this.state
+    const { alt, className, href } = this.props
+
+    if (hover) {
+
+    }
 
     return (
       <a
@@ -27,7 +32,10 @@ class LogoLink extends React.Component {
         onMouseEnter={() => this.setState({ hover: true })}
         onMouseLeave={() => this.setState({ hover: false })}
       >
-        <Logo src={this.state.hover ? hoverLogo : logo} />
+        <React.Fragment>
+          <Logo className={!hover ? 'hovered' : 'not_hovered'} src={this.props.logo} />
+          <Logo className={hover ? 'idle' : 'not_idle'} src={this.props.hoverLogo} />
+        </React.Fragment>
       </a>
     )
   }

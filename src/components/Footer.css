@@ -8,6 +8,11 @@
   padding: 0 1rem;
 }
 
+.Footer .Link .not_hovered,
+.Footer .Link .not_idle {
+  display: none;
+}
+
 .Footer .Footer--License {
   display: none;
 }
