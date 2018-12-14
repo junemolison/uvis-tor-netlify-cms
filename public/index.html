@@ -19,6 +19,46 @@
     -->
     <title>Netlify CMS + React Starter</title>
     <meta id='headerScripts'>
+    <!-- Yandex.Metrika informer -->
+    <a
+      href="https://metrika.yandex.ru/stat/?id=39393210&amp;from=informer"
+      target="_blank"
+      rel="nofollow"
+    >
+      <img
+        src="https://informer.yandex.ru/informer/39393210/3_0_666666FF_666666FF_1_pageviews"
+        style="width:88px; height:31px; border:0;"
+        alt="Яндекс.Метрика"
+        title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+        class="ym-advanced-informer"
+        data-cid="39393210"
+        data-lang="ru"
+      />
+    </a>
+    <!-- /Yandex.Metrika informer -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(39393210, "init", {
+            id:39393210,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+      });
+    </script>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/39393210"
+          style="position:absolute; left:-9999px;"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <div id="root"></div>
@@ -35,15 +75,15 @@
     <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
     // check for netlifyIdentity, redirect to admin if user is logging in
-if (window.localStorage && window.netlifyIdentity) {
-  netlifyIdentity.on('init', function(user) {
-    if (!user) {
-      netlifyIdentity.on('login', function() {
-        document.location.href = '/admin/'
+    if (window.localStorage && window.netlifyIdentity) {
+      netlifyIdentity.on('init', function(user) {
+        if (!user) {
+          netlifyIdentity.on('login', function() {
+            document.location.href = '/admin/'
+          })
+        }
       })
     }
-  })
-}
-</script>
+    </script>
   </body>
 </html>
