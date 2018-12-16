@@ -1,6 +1,7 @@
 import React from 'react'
 import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
+import { SPAM_DETECTOR } from '../util/spamDetector'
 
 import './EnquiryForm.css'
 
@@ -12,8 +13,8 @@ class Form extends React.Component {
     subject: '', // optional subject of the notification email
     action: '',
     successMessage: 'Спасибо за запрос, мы скоро ответим Вам',
-    errorMessage:
-      'Возникла проблема, Ваше сообщение не доставлено, пожалуйста, свяжитесь с нами по почте'
+    errorMessage: 'Возникла проблема, Ваше сообщение не доставлено, пожалуйста, свяжитесь с нами по почте',
+    spamMessage: 'Ваше сообщение было помечено как спам'
   }
 
   state = {
@@ -21,14 +22,24 @@ class Form extends React.Component {
     disabled: false
   }
 
+  validate = text => !SPAM_DETECTOR.test(text)
+
   handleSubmit = e => {
     e.preventDefault()
     if (this.state.disabled) return
 
     const form = e.target
-    const data = serialize(form)
+    if (!this.validate(form.message.value)) {
+      form.reset()
+      this.setState({
+        alert: this.props.spamMessage,
+        disabled: false
+      })
+      return
+    }
+    const data = stringify(serialize(form))
     this.setState({ disabled: true })
-    fetch(form.action + '?' + stringify(data), {
+    fetch(form.action + '?' + data, {
       method: 'POST'
     })
       .then(res => {
