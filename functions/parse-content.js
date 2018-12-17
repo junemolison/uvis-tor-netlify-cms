@@ -53,7 +53,7 @@ const getFileContents = filePath => {
     }
     if (['.yaml', '.yml'].includes(getDocumentExt(filePath))) {
       data = parseYaml(data)
-    } 
+    }
     let documentData = JSON.parse(data)
     documentData.name = getDocumentName(filePath)
     documentData.body = documentData.body || documentData.content

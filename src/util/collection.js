@@ -1,5 +1,4 @@
-// TODO: replace it with includes from nanoutils (https://github.com/nanoutils/nanoutils/issues/166)
-import indexOf from 'nanoutils/cjs/indexOf'
+import includes from 'nanoutils/cjs/includes'
 import kebabCase from 'nanoutils/cjs/kebabCase'
 import uniq from 'nanoutils/cjs/uniq'
 import values from 'nanoutils/cjs/values'
@@ -33,11 +32,12 @@ export const getCollectionTerms = (
 
 export const documentHasTerm = (doc, taxonomyName, term) => {
   const termField = doc[taxonomyName]
-  if (!termField) return false
-  const terms =
-    typeof termField === 'string'
-      ? termField.split(',').map(term => kebabCase(term))
-      : termField.map(term => kebabCase(values(term)[0]))
+  if (!termField) {
+    return false
+  }
+  const terms = typeof termField === 'string'
+    ? termField.split(',').map(term => kebabCase(term))
+    : termField.map(term => kebabCase(values(term)[0]))
 
-  return indexOf(kebabCase(term), terms) !== -1
+  return includes(kebabCase(term), terms)
 }

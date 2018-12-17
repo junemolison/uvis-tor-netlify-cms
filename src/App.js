@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
+import includes from 'nanoutils/cjs/includes'
 
 import ScrollToTop from './components/ScrollToTop'
 import Meta from './components/Meta'
@@ -56,7 +57,7 @@ class App extends Component {
     )
     const categoriesFromPosts = getCollectionTerms(posts, 'categories')
     const postCategories = this.getDocuments('postCategories').filter(
-      category => categoriesFromPosts.indexOf(category.name.toLowerCase()) >= 0
+      category => includes(category.name.toLowerCase(), categoriesFromPosts)
     )
 
     return (
