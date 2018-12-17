@@ -1,7 +1,8 @@
-import _uniq from 'lodash/uniq'
-import _kebabCase from 'lodash/kebabCase'
-import _values from 'lodash/values'
-import _includes from 'lodash/includes'
+// TODO: replace it with includes from nanoutils (https://github.com/nanoutils/nanoutils/issues/166)
+import indexOf from 'nanoutils/cjs/indexOf'
+import kebabCase from 'nanoutils/cjs/kebabCase'
+import uniq from 'nanoutils/cjs/uniq'
+import values from 'nanoutils/cjs/values'
 
 export const getCollectionTerms = (
   collection = [],
@@ -12,16 +13,18 @@ export const getCollectionTerms = (
   // taxonomyName: taxonomy field title, comma-separated string form each collection item
   // orderBy: ['asc', 'desc'] capitals are allowed
 
-  if (!collection.length) return []
+  if (!collection.length) {
+    return []
+  }
   let terms = collection
     .filter(collectionItem => collectionItem[taxonomyName])
     .reduce((acc, collectionItem) => {
       const termField = collectionItem[taxonomyName]
       const collectionItemTerms =
         typeof termField === 'string'
-          ? termField.split(',').map(term => _kebabCase(term.trim()))
-          : termField.map(term => _kebabCase(_values(term)[0]))
-      return _uniq([...acc, ...collectionItemTerms])
+          ? termField.split(',').map(term => kebabCase(term.trim()))
+          : termField.map(term => kebabCase(values(term)[0]))
+      return uniq([...acc, ...collectionItemTerms])
     }, [])
     .sort()
   terms = orderBy.toLowerCase() === 'asc' ? terms : terms.reverse()
@@ -33,8 +36,8 @@ export const documentHasTerm = (doc, taxonomyName, term) => {
   if (!termField) return false
   const terms =
     typeof termField === 'string'
-      ? termField.split(',').map(term => _kebabCase(term))
-      : termField.map(term => _kebabCase(_values(term)[0]))
+      ? termField.split(',').map(term => kebabCase(term))
+      : termField.map(term => kebabCase(values(term)[0]))
 
-  return _includes(terms, _kebabCase(term))
+  return indexOf(kebabCase(term), terms) !== -1
 }

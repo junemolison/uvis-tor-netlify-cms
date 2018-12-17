@@ -1,5 +1,7 @@
 import React from 'react'
-import _sortBy from 'lodash/sortBy'
+import descend from 'nanoutils/cjs/descend'
+import prop from 'nanoutils/cjs/prop'
+import sortBy from 'nanoutils/cjs/sortBy'
 
 import PostCard from '../components/PostCard'
 import './PostSection.css'
@@ -28,9 +30,8 @@ class PostSection extends React.Component {
     const { posts, title, showLoadMore, loadMoreTitle } = this.props
     const { limit } = this.state
 
-    const visiblePosts = _sortBy(posts, ['date'])
-      .reverse()
-      // show all unlesss you set a limit.
+    const visiblePosts = sortBy(descend(prop('date')), posts)
+      // show all unless you set a limit
       .slice(0, limit || posts.length)
 
     return (

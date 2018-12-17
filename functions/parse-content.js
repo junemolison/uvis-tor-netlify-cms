@@ -1,8 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const _set = require('lodash/set')
-const _mergeWith = require('lodash/mergeWith')
-const _isArray = require('lodash/isArray')
+const lensPath = require('nanoutils/cjs/lensPath')
+// TODO: refactor mergeWith to allow multiple objects to merge (https://github.com/nanoutils/nanoutils/issues/168)
+const mergeWith = require('nanoutils/cjs/mergeWith')
 const globCb = require('glob')
 const util = require('util')
 
@@ -16,12 +16,12 @@ const options = {
   outputFile: './src/data.json'
 }
 
-const getCollectionType = filePath => {
+const getCollectionPath = filePath => {
   const pathParsed = path.parse(filePath)
-  const objectKey = pathParsed.dir
+
+  return pathParsed.dir
     .replace(options.contentDir, '')
-    .replace(/\//g, '.')
-  return `${objectKey}`
+    .split('/')
 }
 
 const getDocumentName = filePath => {
@@ -53,12 +53,11 @@ const getFileContents = filePath => {
     }
     if (['.yaml', '.yml'].includes(getDocumentExt(filePath))) {
       data = parseYaml(data)
-    }
+    } 
     let documentData = JSON.parse(data)
     documentData.name = getDocumentName(filePath)
     documentData.body = documentData.body || documentData.content
-    let obj = {}
-    _set(obj, getCollectionType(filePath), [documentData])
+    const obj = lensPath(getCollectionPath(filePath))({}).set([documentData])
     console.log(`✨  Processed ${filePath}`)
     return obj
   })
@@ -68,12 +67,16 @@ const readFiles = async paths => Promise.all(paths.map(getFileContents))
 
 const combineJSON = async () => {
   // mergeCustomiser concats arrays items
-  const mergeCustomiser = (objValue, srcValue) =>
-    _isArray(objValue) ? objValue.concat(srcValue) : objValue
+  const mergeCustomiser = (objValue, srcValue) => Array.isArray(objValue)
+    ? objValue.concat(srcValue)
+    : objValue
   console.log(`✨  Reading JSON files in ${options.contentDir}`)
   const paths = await glob(`${options.contentDir}/**/**.+(json|md|yaml|yml)`)
   const results = await readFiles(paths)
-  const data = _mergeWith({}, ...results, mergeCustomiser)
+  let data = {}
+  for (let i = 0; i < results.length; i++) {
+    data = mergeWith(mergeCustomiser, data, results[i])
+  }
   return JSON.stringify(data, null, 2)
 }
 

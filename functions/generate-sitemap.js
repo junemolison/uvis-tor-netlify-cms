@@ -1,7 +1,7 @@
 const generateSitemap = require('sitemap-static')
 const fs = require('fs')
-const _find = require('lodash/find')
-const _endsWith = require('lodash/endsWith')
+const find = require('nanoutils/cjs/find')
+const endsWith = require('nanoutils/cjs/endsWith')
 const data = require('../src/data.json')
 
 const options = {
@@ -13,10 +13,14 @@ const options = {
 
 const getSiteUrl = () => {
   // get siteUrl from: data.settings.global.siteUrl
-  if (!data || !data.settings) return null
-  const globalSettings = _find(data.settings, item => item.name === 'global')
-  if (!globalSettings) return null
-  const siteUrl = _endsWith(globalSettings.siteUrl, '/')
+  if (!data || !data.settings) {
+    return null
+  }
+  const globalSettings = find(item => item.name === 'global', data.settings)
+  if (!globalSettings) {
+    return null
+  }
+  const siteUrl = endsWith('/', globalSettings.siteUrl)
     ? globalSettings.siteUrl
     : globalSettings.siteUrl + '/'
   return siteUrl

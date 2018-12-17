@@ -1,5 +1,7 @@
 import React from 'react'
-import _sortBy from 'lodash/sortBy'
+import descend from 'nanoutils/cjs/descend'
+import sortBy from 'nanoutils/cjs/sortBy'
+import prop from 'nanoutils/cjs/prop'
 
 import PageHeader from '../components/PageHeader'
 import PostCategoriesNav from '../components/PostCategoriesNav'
@@ -14,7 +16,7 @@ export default ({
   showFeatured = true
 }) => {
   const { title, subtitle, featuredImage } = fields
-  posts = _sortBy(posts, ['date']).reverse()
+  posts = sortBy(descend(prop('date')), posts)
 
   return (
     <main className='Blog'>

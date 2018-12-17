@@ -1,9 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import _get from 'lodash/get'
-import _pickBy from 'lodash/pickBy'
+import pickBy from 'nanoutils/cjs/pickBy'
+import compact from 'nanoutils/cjs/compact'
+import lensPath from 'nanoutils/cjs/lensPath'
 
-const onlyTruthyValues = obj => _pickBy(obj, item => item)
+const onlyTruthyValues = obj => pickBy(compact, obj)
 
 const Meta = props => {
   const {
@@ -19,8 +20,8 @@ const Meta = props => {
     // overwrite { title, description } if in fields or fields.meta
   } = {
     ...props,
-    ...onlyTruthyValues(_get(props, 'fields')),
-    ...onlyTruthyValues(_get(props, 'fields.meta'))
+    ...onlyTruthyValues(lensPath(['fields'])(props)),
+    ...onlyTruthyValues(lensPath(['fields', 'meta'])(props))
   }
 
   // write headerScripts

@@ -1,9 +1,9 @@
-import _kebabCase from 'lodash/kebabCase'
+import kebabCase from 'nanoutils/cjs/kebabCase'
 
 export const slugify = (string = '') =>
   // keeps forward slashes
   string
     .toLowerCase()
     .split('/')
-    .map(_kebabCase)
+    .map(kebabCase)
     .join('/')
