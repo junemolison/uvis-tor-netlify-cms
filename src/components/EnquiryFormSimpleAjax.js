@@ -110,6 +110,7 @@ class Form extends React.Component {
             required
           />
         </label>
+        <div data-netlify-recaptcha='true' />
         <input type='text' name='_gotcha' style={{ display: 'none' }} />
         {!!subject && <input type='hidden' name='subject' value={subject} />}
         <input type='hidden' name='form-name' value={name} />
