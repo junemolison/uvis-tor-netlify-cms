@@ -98,7 +98,7 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
             />
           )}
         </div>
-        <span>© 2018 Все права защищены</span>
+        <span>© 2019 Все права защищены</span>
         <div className='Footer--License'>
           Icons made by
           <a alt='Link to Freepik' href='http://www.freepik.com' title='Freepik'>Freepik</a>
