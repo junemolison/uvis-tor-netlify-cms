@@ -67,6 +67,7 @@ class LazyImage extends React.Component {
           sizes={sizes || '100vw'}
           onClick={onClick}
           alt={alt}
+          style={{ height: 500, width: 'auto', margin: '0 auto' }}
         />
       )
     }
@@ -80,6 +81,7 @@ class LazyImage extends React.Component {
           sizes={sizes || '100vw'}
           onClick={onClick}
           alt={alt}
+          style={{ height: 500, width: 'auto', margin: '0 auto' }}
         />
       </Observer>
     )

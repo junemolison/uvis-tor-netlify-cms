@@ -13,7 +13,7 @@ const options = {
   inputDir: './public/images/uploads',
   outputDir: './public/images/uploads/resized',
   sizes,
-  imageFormats: ['jpg', 'jpeg', 'png', 'gif', 'webp']
+  imageFormats: ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF', 'webp', 'WEBP']
 }
 
 const saveImage = ({ buffer, size, outputFile }) => {
