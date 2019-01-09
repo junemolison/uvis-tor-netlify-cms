@@ -1,2 +1,28 @@
 .Gallery {
+  margin-bottom: 60px;
+}
+
+.Gallery section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Gallery section:after {
+  content: '';
+  flex-grow: 999999999;
+}
+
+.Gallery h1 {
+  flex: 0 1 100%;
+}
+
+.Gallery section img {
+  top: 0;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.Gallery section .Photo-Gallery-Wrapper--Image {
+  margin: 2px;
+  position: relative;
 }

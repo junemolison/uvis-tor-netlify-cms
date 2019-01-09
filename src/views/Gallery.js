@@ -1,29 +1,50 @@
 import React from 'react'
 
-import PageHeader from '../components/PageHeader'
-import Carousel from '../components/Carousel'
+import LazyImage from '../components/LazyImage'
 import './Gallery.css'
 
 export default class Gallery extends React.Component {
+  state = {}
+
+  handleSizeLoaded = (i, j, { width, height }) => {
+    this.setState({
+      [`${i}-${j}`]: width * 200 / height
+    })
+  }
+
   render () {
-    const { title, subtitle, featuredImage, galleryCarousels } = this.props.fields
+    const { photoGallery } = this.props.fields
 
     return (
-      <div className='Gallery'>
-        <PageHeader
-          title={title}
-          subtitle={subtitle}
-          backgroundImage={featuredImage}
-        />
-        <div className='section'>
-          {galleryCarousels.map(({ title, images }, key) => (
-            <Carousel
-              key={key}
-              title={title}
-              images={images}
-            />
-          ))}
-        </div>
+      <div className='Gallery container'>
+        {photoGallery.map(({ title, images }, galleryIndex) => (
+          <section key={`Photo-Gallery-${galleryIndex}`}>
+            <h1>{ title }</h1>
+            {images.map((image, index) => {
+              const width = this.state[`${galleryIndex}-${index}`]
+
+              const divStyle = {
+                width,
+                flexGrow: width
+              }
+
+              return (
+                <div
+                  key={`Photo-Gallery-${galleryIndex}-${index}`}
+                  className='Photo-Gallery-Wrapper--Image'
+                  style={divStyle}
+                >
+                  <LazyImage
+                    className='Photo-Gallery--Image'
+                    src={image}
+                    alt='Photo-Gallery--Image'
+                    onSizeLoaded={size => this.handleSizeLoaded(galleryIndex, index, size)}
+                  />
+                </div>
+              )
+            })}
+          </section>
+        ))}
       </div>
     )
   }

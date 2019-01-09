@@ -10,7 +10,8 @@ class LazyImage extends React.Component {
   static defaultProps = {
     lazy: true,
     enableSrcset: true,
-    imageSize: '300'
+    imageSize: '300',
+    onSizeLoaded: () => { }
   }
 
   state = {
@@ -29,6 +30,8 @@ class LazyImage extends React.Component {
       const img = new Image()
       img.src = this.state.dataSrc
       img.onload = () => {
+        const { width, height } = img
+        this.props.onSizeLoaded({ width, height })
         this.setState({
           src: this.state.dataSrc,
           srcSet: this.state.dataSrcSet,
@@ -67,7 +70,6 @@ class LazyImage extends React.Component {
           sizes={sizes || '100vw'}
           onClick={onClick}
           alt={alt}
-          style={{ height: 500, width: 'auto', margin: '0 auto' }}
         />
       )
     }
@@ -81,7 +83,6 @@ class LazyImage extends React.Component {
           sizes={sizes || '100vw'}
           onClick={onClick}
           alt={alt}
-          style={{ height: 500, width: 'auto', margin: '0 auto' }}
         />
       </Observer>
     )

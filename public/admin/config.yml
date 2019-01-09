@@ -61,8 +61,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: markdown}
           - {label: Featured Image, name: featuredImage, widget: image}
-          - label: "Gallery Carousels"
-            name: "galleryCarousels"
+          - label: "Photo Gallery"
+            name: "photoGallery"
             widget: "list"
             fields:
               - {label: Title, name: title, widget: string}

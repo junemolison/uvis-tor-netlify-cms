@@ -19,7 +19,6 @@ const options = {
 const saveImage = ({ buffer, size, outputFile }) => {
   return new Promise((resolve, reject) => {
     sharp(buffer)
-      .withMetadata()
       .resize(size)
       .withoutEnlargement()
       .toFile(outputFile, err => {

@@ -2,62 +2,37 @@
 title: Галерея
 subtitle: Торговый Дом «Мастер Защиты»
 featuredImage: /images/uploads/1.jpg
-galleryCarousels:
+photoGallery:
   - images:
       - /images/uploads/1.jpg
       - /images/uploads/2.jpg
       - /images/uploads/15.jpg
-      # -90
       # - /images/uploads/20180201_125609.jpg
-      # -90
       # - /images/uploads/20180201_125949.jpg
       - /images/uploads/20180201_125955.jpg
       - /images/uploads/20180201_130012.jpg
-      # -90
       # - /images/uploads/20180201_130023.jpg
-      # -90
       # - /images/uploads/20180201_130027.jpg
-      # -90
       # - /images/uploads/20180201_130033.jpg
-      # -90
       # - /images/uploads/20180201_130038.jpg
-      # -90
       # - /images/uploads/20180201_130050.jpg
-      # -90
       # - /images/uploads/20180201_130055.jpg
-      # -90
       # - /images/uploads/20180201_130108.jpg
-      # -90
       # - /images/uploads/20180201_130115.jpg
-      # -90
       # - /images/uploads/20180201_130121.jpg
-      # -90
       # - /images/uploads/20180201_130129.jpg
-      # -90
       # - /images/uploads/20180201_130135.jpg
-      # -90
       # - /images/uploads/20180201_130213.jpg
-      # -90
       # - /images/uploads/20180201_130230.jpg
-      # -90
       # - /images/uploads/20180201_131206.jpg
-      # -90
       # - /images/uploads/20180201_131213.jpg
-      # -90
       # - /images/uploads/20180201_131220.jpg
-      # -90
       # - /images/uploads/20180616_134803.jpg
-      # -90
       # - /images/uploads/20180616_134809.jpg
-      # -90
       # - /images/uploads/20180616_134817.jpg
-      # -90
       # - /images/uploads/20180616_134824.jpg
-      # -90
       # - /images/uploads/20180616_134832.jpg
-      # -90
       # - /images/uploads/20180616_134839.jpg
-      # -90
       # - /images/uploads/20180616_134845.jpg
       - /images/uploads/image_3.jpeg
       - /images/uploads/image_7.jpeg
@@ -78,7 +53,6 @@ galleryCarousels:
       - /images/uploads/IMG-20151222-WA0023.jpg
       - /images/uploads/IMG-20160123-WA0000.jpg
       - /images/uploads/IMG-20160318-WA0000.jpg
-      - /images/uploads/IMG-20160329-WA0011.jpg
       - /images/uploads/IMG-20160329-WA0015.jpg
       - /images/uploads/IMG-20160428-WA0015.jpg
       - /images/uploads/IMG-20160715-WA0006.jpg
