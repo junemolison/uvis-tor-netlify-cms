@@ -1,18 +1,37 @@
+import * as cx from 'classnames'
+import clone from 'nanoutils/cjs/clone'
+import equals from 'nanoutils/cjs/equals'
+import lensPath from 'nanoutils/cjs/lensPath'
+import over from 'nanoutils/cjs/over'
 import React from 'react'
 
 import LazyImage from '../components/LazyImage'
 import './Gallery.css'
 
 export default class Gallery extends React.Component {
-  state = {}
+  state = {
+    scrollTop: 0,
+    sizes: [],
+    fullscreenView: undefined
+  }
 
   handleSizeLoaded = (i, j, { width, height }) => {
+    const sizes = clone(this.state.sizes)
+    const widthLens = lensPath([i, j])
+    const setWidth = () => width * 200 / height
     this.setState({
-      [`${i}-${j}`]: width * 200 / height
+      sizes: over(widthLens, setWidth, sizes)
     })
   }
 
-  render () {
+  toggleView = (i, j) => {
+    const willBeClosed = equals(this.state.fullscreenView, [i, j])
+    this.setState({
+      fullscreenView: willBeClosed ? undefined : [i, j]
+    })
+  }
+
+  renderGallery = () => {
     const { photoGallery } = this.props.fields
 
     return (
@@ -21,8 +40,8 @@ export default class Gallery extends React.Component {
           <section key={`Photo-Gallery-${galleryIndex}`}>
             <h1>{ title }</h1>
             {images.map((image, index) => {
-              const width = this.state[`${galleryIndex}-${index}`]
-
+              const widthLens = lensPath([galleryIndex, index])
+              const width = widthLens(this.state.sizes).get()
               const divStyle = {
                 width,
                 flexGrow: width
@@ -31,8 +50,9 @@ export default class Gallery extends React.Component {
               return (
                 <div
                   key={`Photo-Gallery-${galleryIndex}-${index}`}
-                  className='Photo-Gallery-Wrapper--Image'
+                  className={'Photo-Gallery-Wrapper--Image'}
                   style={divStyle}
+                  onClick={() => this.toggleView(galleryIndex, index)}
                 >
                   <LazyImage
                     className='Photo-Gallery--Image'
@@ -46,6 +66,37 @@ export default class Gallery extends React.Component {
           </section>
         ))}
       </div>
+    )
+  }
+
+  renderImage = () => {
+    const { photoGallery } = this.props.fields
+    let i = -1
+    let j = -1
+
+    if (this.state.fullscreenView) {
+      [i, j] = this.state.fullscreenView
+    }
+
+    return (
+      <div
+        className={cx('Photo-Gallery-Wrapper--Image', {
+          fixed: this.state.fullscreenView
+        })}
+        onClick={() => this.setState({ fullscreenView: undefined })}
+        style={i !== -1 && j !== -1 ? {
+          backgroundImage: `url(${photoGallery[i].images[j]})`
+        } : {}}
+      />
+    )
+  }
+
+  render () {
+    return (
+      <React.Fragment>
+        {this.renderImage()}
+        {this.renderGallery()}
+      </React.Fragment>
     )
   }
 }
