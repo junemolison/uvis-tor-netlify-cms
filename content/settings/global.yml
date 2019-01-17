@@ -9,10 +9,10 @@ socialMediaCard:
   facebook: '@tdmasterdefender'
   image: /images/uploads/2.jpg
   instagram: '@masterdefender'
-  whatsapp: '+7 (903) 669-90-10'
+  whatsapp: +7 (903) 669-90-10
   whatsappMessage: 'Николай, здравствуйте!'
 headerScripts: |-
   <!-- Add your analytics scripts / verification meta here -->
   <!-- Yandex webmaster -->
-  <meta name="yandex-verification" content="a56ff224a02ed945" />
+  <meta name="yandex-verification" content="9a9d9d2d42224b39" />
 enableServiceWorker: true
