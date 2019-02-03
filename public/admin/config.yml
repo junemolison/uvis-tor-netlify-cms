@@ -22,8 +22,12 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Featured Image, name: featuredImage, widget: image}
           - {label: Subtitle, name: subtitle, widget: markdown}
           - {label: Body, name: body, widget: markdown}
-          - {label: Address, name: address, widget: text}
-          - {label: Phone, name: phone, widget: string}
+          - label: "Addresses"
+            name: "addresses"
+            widget: "list"
+            fields:
+              - {label: Address, name: address, widget: text}
+              - {label: Phone, name: phone, widget: string}
           - {label: Email Address, name: email, widget: string}
           - label: "Meta"
             required: false
