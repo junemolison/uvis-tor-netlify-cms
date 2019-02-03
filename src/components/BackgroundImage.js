@@ -64,7 +64,7 @@ export default class BackgroundImage extends React.Component {
           style={{
             backgroundImage: `url(${getImageSrc(this.props.src, imageSize)})`,
             backgroundSize: contain ? 'contain' : 'cover',
-            opacity: opacity
+            opacity
           }}
         />
       )
@@ -85,7 +85,7 @@ export default class BackgroundImage extends React.Component {
           style={{
             backgroundImage: `url(${src})`,
             backgroundSize: contain ? 'contain' : 'cover',
-            opacity: opacity
+            opacity
           }}
         />
       </Observer>

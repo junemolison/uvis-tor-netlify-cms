@@ -27,15 +27,3 @@
   margin: 2px;
   cursor: pointer;
 }
-
-.Photo-Gallery-Wrapper--Image.fixed {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  background-color: black;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-}

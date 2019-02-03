@@ -1,4 +1,3 @@
-import * as cx from 'classnames'
 import clone from 'nanoutils/cjs/clone'
 import equals from 'nanoutils/cjs/equals'
 import lensPath from 'nanoutils/cjs/lensPath'
@@ -7,6 +6,8 @@ import React from 'react'
 
 import LazyImage from '../components/LazyImage'
 import './Gallery.css'
+import FullscreenImage from '../components/FullscreenImage'
+import { adjustSizeInGallery } from '../util/size'
 
 export default class Gallery extends React.Component {
   state = {
@@ -15,10 +16,10 @@ export default class Gallery extends React.Component {
     fullscreenView: undefined
   }
 
-  handleSizeLoaded = (i, j, { width, height }) => {
+  handleSizeLoaded = (i, j, image) => {
     const sizes = clone(this.state.sizes)
     const widthLens = lensPath([i, j])
-    const setWidth = () => width * 200 / height
+    const setWidth = () => adjustSizeInGallery(image).width
     this.setState({
       sizes: over(widthLens, setWidth, sizes)
     })
@@ -69,32 +70,29 @@ export default class Gallery extends React.Component {
     )
   }
 
-  renderImage = () => {
+  renderFullscreenImage = () => {
     const { photoGallery } = this.props.fields
-    let i = -1
-    let j = -1
 
     if (this.state.fullscreenView) {
-      [i, j] = this.state.fullscreenView
+      const [i, j] = this.state.fullscreenView
+
+      return (
+        <FullscreenImage
+          className='Photo-Gallery--Image'
+          src={photoGallery[i].images[j]}
+          alt='Photo-Gallery--Image'
+          onClick={() => this.setState({ fullscreenView: undefined })}
+        />
+      )
     }
 
-    return (
-      <div
-        className={cx('Photo-Gallery-Wrapper--Image', {
-          fixed: this.state.fullscreenView
-        })}
-        onClick={() => this.setState({ fullscreenView: undefined })}
-        style={i !== -1 && j !== -1 ? {
-          backgroundImage: `url(${photoGallery[i].images[j]})`
-        } : {}}
-      />
-    )
+    return undefined
   }
 
   render () {
     return (
       <React.Fragment>
-        {this.renderImage()}
+        {this.renderFullscreenImage()}
         {this.renderGallery()}
       </React.Fragment>
     )
