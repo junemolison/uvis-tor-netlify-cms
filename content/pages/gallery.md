@@ -7,33 +7,33 @@ photoGallery:
       - /images/uploads/1.jpg
       - /images/uploads/2.jpg
       - /images/uploads/15.jpg
-      # - /images/uploads/20180201_125609.jpg
-      # - /images/uploads/20180201_125949.jpg
+      - /images/uploads/20180201_125609.jpg
+      - /images/uploads/20180201_125949.jpg
       - /images/uploads/20180201_125955.jpg
       - /images/uploads/20180201_130012.jpg
-      # - /images/uploads/20180201_130023.jpg
-      # - /images/uploads/20180201_130027.jpg
-      # - /images/uploads/20180201_130033.jpg
-      # - /images/uploads/20180201_130038.jpg
-      # - /images/uploads/20180201_130050.jpg
-      # - /images/uploads/20180201_130055.jpg
-      # - /images/uploads/20180201_130108.jpg
-      # - /images/uploads/20180201_130115.jpg
-      # - /images/uploads/20180201_130121.jpg
-      # - /images/uploads/20180201_130129.jpg
-      # - /images/uploads/20180201_130135.jpg
-      # - /images/uploads/20180201_130213.jpg
-      # - /images/uploads/20180201_130230.jpg
-      # - /images/uploads/20180201_131206.jpg
-      # - /images/uploads/20180201_131213.jpg
-      # - /images/uploads/20180201_131220.jpg
-      # - /images/uploads/20180616_134803.jpg
-      # - /images/uploads/20180616_134809.jpg
-      # - /images/uploads/20180616_134817.jpg
-      # - /images/uploads/20180616_134824.jpg
-      # - /images/uploads/20180616_134832.jpg
-      # - /images/uploads/20180616_134839.jpg
-      # - /images/uploads/20180616_134845.jpg
+      - /images/uploads/20180201_130023.jpg
+      - /images/uploads/20180201_130027.jpg
+      - /images/uploads/20180201_130033.jpg
+      - /images/uploads/20180201_130038.jpg
+      - /images/uploads/20180201_130050.jpg
+      - /images/uploads/20180201_130055.jpg
+      - /images/uploads/20180201_130108.jpg
+      - /images/uploads/20180201_130115.jpg
+      - /images/uploads/20180201_130121.jpg
+      - /images/uploads/20180201_130129.jpg
+      - /images/uploads/20180201_130135.jpg
+      - /images/uploads/20180201_130213.jpg
+      - /images/uploads/20180201_130230.jpg
+      - /images/uploads/20180201_131206.jpg
+      - /images/uploads/20180201_131213.jpg
+      - /images/uploads/20180201_131220.jpg
+      - /images/uploads/20180616_134803.jpg
+      - /images/uploads/20180616_134809.jpg
+      - /images/uploads/20180616_134817.jpg
+      - /images/uploads/20180616_134824.jpg
+      - /images/uploads/20180616_134832.jpg
+      - /images/uploads/20180616_134839.jpg
+      - /images/uploads/20180616_134845.jpg
       - /images/uploads/image_3.jpeg
       - /images/uploads/image_7.jpeg
       - /images/uploads/image_8.jpeg

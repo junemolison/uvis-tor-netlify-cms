@@ -20,6 +20,7 @@ const saveImage = ({ buffer, size, outputFile }) => {
   return new Promise((resolve, reject) => {
     sharp(buffer)
       .resize(size)
+      .rotate()
       .withoutEnlargement()
       .toFile(outputFile, err => {
         if (err) {
