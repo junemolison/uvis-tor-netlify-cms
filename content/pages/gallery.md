@@ -89,14 +89,13 @@ photoGallery:
       - /images/uploads/IMG_3489.JPG
     title: Межкомнатные двери
   - images:
+      - /images/uploads/IMG-20160327-WA0002.jpg
+      - /images/uploads/IMG-20160327-WA0009.jpg
       - /images/uploads/_k9a7299.jpg
       - /images/uploads/dv2.jpg
       - /images/uploads/_k9a7301.jpg
       - /images/uploads/_k9a7302.jpg
-    title: Дачный ответ
-  - images:
-      - /images/uploads/IMG-20160327-WA0002.jpg
-      - /images/uploads/IMG-20160327-WA0009.jpg
+      - /images/uploads/20150522_115257.jpg
     title: Шаттерсы
 ---
 
