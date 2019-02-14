@@ -82,6 +82,11 @@ photoGallery:
       - /images/uploads/IMG-20150723-WA0007.jpg
       - /images/uploads/IMG-20160314-WA0003.jpg
       - /images/uploads/IMG-20160503-WA0000.jpg
+      - /images/uploads/IMG_2186.JPG
+      - /images/uploads/IMG_2207.JPG
+      - /images/uploads/IMG_2208.JPG
+      - /images/uploads/IMG_2270.JPG
+      - /images/uploads/IMG_3489.JPG
     title: Межкомнатные двери
   - images:
       - /images/uploads/_k9a7299.jpg
