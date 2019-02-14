@@ -77,6 +77,18 @@ photoGallery:
       - /images/uploads/IMG-20170121-WA0000.jpg
       - /images/uploads/IMG-20170121-WA0000123.jpeg
       - /images/uploads/IMG-20170121-WA0000125.JPG
+      - /images/uploads/20170216_115748.jpg
+      - /images/uploads/20170216_115755.jpg
+      - /images/uploads/20170329_140130.jpg
+      - /images/uploads/gzasjtNwBW0.jpg
+      - /images/uploads/IMG_1470.JPG
+      - /images/uploads/IMG_2635.JPG
+      - /images/uploads/IMG_3748.JPG
+      - /images/uploads/IMG_3751.JPG
+      - /images/uploads/IMG_3818.JPG
+      - /images/uploads/IMG_3819.JPG
+      - /images/uploads/IMG_4071.JPG
+      - /images/uploads/IMG_4463.JPG
     title: Входные двери
   - images:
       - /images/uploads/IMG-20150723-WA0007.jpg
