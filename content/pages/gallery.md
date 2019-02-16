@@ -126,5 +126,25 @@ photoGallery:
       - /images/uploads/IMG_2642.jpg
       - /images/uploads/эскиз деталь_1.jpg
     title: Чертежи
+  - images:
+      - /images/uploads/5643.jpeg
+      - /images/uploads/20150520_124930.jpg
+      - /images/uploads/image (18).jpeg
+      - /images/uploads/image7.jpeg
+      - /images/uploads/IMG_2291.JPG
+      - /images/uploads/IMG_2295.JPG
+      - /images/uploads/IMG_2296.JPG
+      - /images/uploads/IMG_2759.JPG
+      - /images/uploads/IMG_2761.JPG
+      - /images/uploads/IMG_2765.JPG
+      - /images/uploads/IMG_2855.JPG
+      - /images/uploads/IMG_2885.JPG
+      - /images/uploads/IMG-20150315-WA0002.JPG
+      - /images/uploads/IMG-20150316-WA0027.JPG
+      - /images/uploads/заготовка с тонировкой.jpg
+      - /images/uploads/заготовка филенка.jpg
+      - /images/uploads/с зеркалами.jpeg
+      - /images/uploads/IMG-20170121-WA0000.jpg
+    title: Производство
 ---
 
