@@ -74,7 +74,6 @@ photoGallery:
       - /images/uploads/IMG-20170116-WA0001.jpg
       - /images/uploads/IMG-20170116-WA0002.jpg
       - /images/uploads/IMG-20170116-WA0003.jpg
-      - /images/uploads/IMG-20170121-WA0000.jpg
       - /images/uploads/IMG-20170121-WA0000123.jpeg
       - /images/uploads/IMG-20170121-WA0000125.JPG
       - /images/uploads/20170216_115748.jpg
@@ -111,6 +110,21 @@ photoGallery:
       - /images/uploads/_k9a7301.jpg
       - /images/uploads/_k9a7302.jpg
       - /images/uploads/20150522_115257.jpg
+      - /images/uploads/IMG-20160526-WA0008.jpg
     title: Шаттерсы
+  - images:
+      - /images/uploads/image2.jpg
+      - /images/uploads/image3.jpeg
+      - /images/uploads/image5.jpeg
+      - /images/uploads/image8.jpeg
+      - /images/uploads/image9.jpeg
+      - /images/uploads/image11.jpeg
+      - /images/uploads/image14.jpeg
+      - /images/uploads/IMG-20160122-WA0002_1.jpg
+      - /images/uploads/IMG-20151222-WA0006.jpg
+      - /images/uploads/IMG_2639.jpg
+      - /images/uploads/IMG_2642.jpg
+      - /images/uploads/эскиз деталь_1.jpg
+    title: Чертежи
 ---
 
