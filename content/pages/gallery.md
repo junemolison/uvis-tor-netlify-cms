@@ -125,6 +125,7 @@ photoGallery:
       - /images/uploads/IMG_2639.jpg
       - /images/uploads/IMG_2642.jpg
       - /images/uploads/эскиз деталь_1.jpg
+      - /images/uploads/IMG-20181220-WA0004.jpg
     title: Чертежи
   - images:
       - /images/uploads/5643.jpeg
