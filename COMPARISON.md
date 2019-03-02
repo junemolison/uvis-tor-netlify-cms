@@ -2,7 +2,7 @@ I researched the index page of the website which is loaded by default
 The metrics are generated with [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
 | \# | Name | Performance | FCP | FMP | TTI | PWA | Accessibility | SEO | Platform | JS Framework | Link |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | -- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | -- | --- | --- |
 | 1 | Alfador | 19 | 3.7s | 5.9s | 25.9s | 19 | 59 | 80 | 1C-Bitrix | jQuery, Bootstrap | [dveri-alfador.ru](https://www.dveri-alfador.ru/) |
 | 2 | Baltic Doors | __99__ | __1.6s__ | __1.6s__ | __1.7s__ | 31 | 64 | 80 | UMI.CMS | jQuery | [balticdoors.com](http://www.balticdoors.com/) |
 | 3 | Dolce Porte | __99__ | __1.6s__ | __1.9s__ | __2.0s__ | 42 | 38 | __100__ | ? | jQuery | [dolceporte.ru](http://www.dolceporte.ru/) |
