@@ -1,15 +1,13 @@
-siteTitle: Торговый Дом «Мастер Защиты»
-siteUrl: 'https://tda-mz.ru'
-siteDescription: >-
-  Торгово-производственная компания «Мастер Защиты» производит входные
-  металлические и деревянные двери, межкомнатные двери и мебель по Вашим
-  эскизам, предметы интерьера и стеновые панели, жалюзийные ставни (шаттерсы),
-  изделия из искусственного камня (Corian, Staron, Montelli)
+siteTitle: ЮВИС
+siteUrl: 'https://uvistor.com'
+siteDescription: |-
+  ОБОРУДОВАНИЕ ДЛЯ БИЗНЕСА
+  ИННОВАЦИИ, КАЧЕСТВО, ЕВРОПЕЙСКИЕ СТАНДАРТЫ
 socialMediaCard:
-  facebook: '@tdmasterdefender'
-  image: /images/uploads/2.jpg
-  instagram: '@masterdefender'
-  whatsapp: +7 (903) 669-90-10
+  facebook: ''
+  image: ''
+  instagram: ''
+  whatsapp: +38 (050) 565 80 67
   whatsappMessage: 'Николай, здравствуйте!'
 headerScripts: |-
   <!-- Add your analytics scripts / verification meta here -->
