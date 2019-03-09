@@ -1,6 +1,6 @@
 ---
 title: Новости
-featuredImage: /images/uploads/2.jpg
-subtitle: Торговый Дом «Мастер Защиты»
+featuredImage: /images/uploads/2971833.jpeg
+subtitle: \\
 ---
 
