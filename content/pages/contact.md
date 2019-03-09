@@ -1,15 +1,16 @@
 ---
 title: Контакты
-featuredImage: /images/uploads/1.jpg
-subtitle: Торговый Дом «Мастер Защиты»
+featuredImage: /images/uploads/2971833.jpeg
+subtitle: '1'
 addresses:
-  - address: 'ТК “Ланской”, ул. Студенческая 10, 2 этаж, модуль В32'
-    phone: +7 (903) 669-90-10
-  - address: 'ТК "Загородный дом”, пр. Ленинский 140, 4 этаж, секция 431'
-    phone: +7 (962) 709-69-29
-  - address: 'ТК "Василеостровский", ул. Железноводская 3, 2 этаж, модуль 47'
-    phone: +7 (962) 709-69-29
-email: tdmasterdefender@gmail.com
+  - address: |-
+      ул. Зеленая, д.75 
+      г. Балаклея 
+      Харьковская область 
+      64201
+      Украина
+    phone: +38 (050) 565 80 67
+email: uvistor@gmail.com
 ---
 # Возникли вопросы?
 
