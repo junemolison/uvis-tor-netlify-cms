@@ -35,17 +35,20 @@ export default class Nav extends React.Component {
             <Logo />
           </AccessibleLink>
           <div className='Nav--Desktop'>
-            <NavLink to='/gallery/' exact>
-              Галерея
+            <NavLink to='/' exact>
+              Главная
             </NavLink>
             <NavLink to='/benefits/' exact>
               Почему мы
             </NavLink>
             <NavLink to='/blog/' exact>
-              Новости
+              Оборудование
             </NavLink>
             <NavLink to='/contact/' exact>
               Контакты
+            </NavLink>
+            <NavLink to='/gallery/' exact>
+              Галерея
             </NavLink>
           </div>
         </div>
@@ -61,17 +64,20 @@ export default class Nav extends React.Component {
             <Logo />
           </AccessibleLink>
           <Divider />
-          <NavLink to='/gallery/' exact>
-            Галерея
+          <NavLink to='/' exact>
+            Главная
           </NavLink>
           <NavLink to='/benefits/' exact>
             Почему мы
           </NavLink>
           <NavLink to='/blog/' exact>
-            Новости
+            Оборудование
           </NavLink>
           <NavLink to='/contact/' exact>
             Контакты
+          </NavLink>
+          <NavLink to='/gallery/' exact>
+            Галерея
           </NavLink>
           <Divider />
         </Drawer>
