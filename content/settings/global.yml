@@ -7,10 +7,7 @@ socialMediaCard:
   facebook: ''
   image: ''
   instagram: ''
-  whatsapp: +38 (050) 565 80 67
+  whatsapp: +38 (050) 202-43-20
   whatsappMessage: ''
-headerScripts: |-
-  <!-- Add your analytics scripts / verification meta here -->
-  <!-- Yandex webmaster -->
-  <meta name="yandex-verification" content="9a9d9d2d42224b39" />
+headerScripts: <!-- Add your analytics scripts / verification meta here -->
 enableServiceWorker: true
