@@ -3,13 +3,13 @@ title: Контакты
 featuredImage: /images/uploads/2971833.jpeg
 subtitle: '1'
 addresses:
-  - address: |-
-      ул. Зеленая, д.75 
-      г. Балаклея 
-      Харьковская область 
-      64201
-      Украина
-    phone: +38 (050) 565 80 67
+  - address: |
+      Аграрная ул., 6б
+      Донецк
+      Донецкая область
+      83000
+    phone: +38 (050) 565-80-67
+  - phone: +38 (050) 654-52-70
 email: uvistor@gmail.com
 ---
 # Возникли вопросы?
