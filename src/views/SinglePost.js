@@ -50,7 +50,7 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
                 className='SinglePost--Pagination--Link prev'
                 to={prevPostURL}
               >
-                К предыдущей новости
+                К предыдущему оборудованию
               </Link>
             )}
             {nextPostURL && (
@@ -58,7 +58,7 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
                 className='SinglePost--Pagination--Link next'
                 to={nextPostURL}
               >
-                К следующей новости
+                К следующему оборудованию
               </Link>
             )}
           </div>
