@@ -1,7 +1,7 @@
 ---
-title: Обновления
+title: Оборудование
 meta:
-  description: Desc
+  description: ''
   title: Test Updates Title
 ---
 
