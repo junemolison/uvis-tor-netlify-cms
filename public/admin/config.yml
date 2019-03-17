@@ -3,7 +3,7 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-display_url: https://tda-mz.ru # This url will display in the top-right of the CMS
+display_url: https://uvis-slav.com # This url will display in the top-right of the CMS
 media_folder: "public/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
@@ -18,43 +18,80 @@ collections: # A list of collections the CMS should be able to edit
         label: "Contact Page"
         name: "contact-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
-          - {label: Body, name: body, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Body, name: body, widget: markdown }
           - label: "Addresses"
             name: "addresses"
             widget: "list"
             fields:
-              - {label: Address, name: address, widget: text}
-              - {label: Phone, name: phone, widget: string}
-          - {label: Email Address, name: email, widget: string}
+              - { label: Address, name: address, widget: text }
+              - { label: Phone, name: phone, widget: string }
+          - { label: Email Address, name: email, widget: string }
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-              - {label: Noindex, name: noindex, widget: boolean, required: false}
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
 
       - file: "content/pages/blog.md"
         label: "Blog Page"
         name: "blog-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - {
+              label: Subtitle,
+              name: subtitle,
+              widget: markdown,
+              required: false,
+            }
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-              - {label: Noindex, name: noindex, widget: boolean, required: false}
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
 
       - file: "content/pages/gallery.md"
         label: "Gallery"
@@ -62,69 +99,116 @@ collections: # A list of collections the CMS should be able to edit
         editor:
           preview: true
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: markdown}
-          - {label: Featured Image, name: featuredImage, widget: image}
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Featured Image, name: featuredImage, widget: image }
           - label: "Photo Gallery"
             name: "photoGallery"
             widget: "list"
             fields:
-              - {label: Title, name: title, widget: string}
+              - { label: Title, name: title, widget: string }
               - label: "Images"
                 name: "images"
                 widget: "list"
-                field: {widget: image}
+                field: { widget: image }
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-              - {label: Noindex, name: noindex, widget: boolean, required: false}
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
 
       - file: "content/pages/home.md"
         label: "Home Page"
         name: "home-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
-          - {label: Body, name: body, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Body, name: body, widget: markdown }
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-              - {label: Noindex, name: noindex, widget: boolean, required: false}
-      
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
       - file: "content/pages/benefits.md"
         label: "Benefits"
         name: "benefits-page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Featured Image, name: featuredImage, widget: image}
-          - {label: Subtitle, name: subtitle, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown }
           - label: "Benefits"
             name: "benefits"
             widget: "list"
             fields:
-              - {label: Body, name: body, widget: markdown}
-              - {label: Image, name: image, widget: image}
+              - { label: Body, name: body, widget: markdown }
+              - { label: Image, name: image, widget: image }
           - label: "Meta"
             required: false
             name: "meta"
             widget: "object"
             fields:
-              - {label: Title, name: title, widget: string, required: false}
-              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-              - {label: Noindex, name: noindex, widget: boolean, required: false}
-
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: [".{,300}", "Must not exceed 300 characters"],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
 
   - name: posts
     label: Post
@@ -134,16 +218,21 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: Title, name: title, widget: string}
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
+      - { label: Title, name: title, widget: string }
+      - label: "Status"
+        name: "status"
+        widget: "select"
         options: ["Published", "Featured", "Draft"]
-        default: 'Published'
-      - {label: Date / Order, name: date, widget: date}
-      - {label: Post Featured Image, name: postFeaturedImage, widget: image, required: false}
-      - {label: Excerpt, name: excerpt, widget: text}
-      - {label: Content, name: body, widget: markdown}
+        default: "Published"
+      - { label: Date / Order, name: date, widget: date }
+      - {
+          label: Post Featured Image,
+          name: postFeaturedImage,
+          widget: image,
+          required: false,
+        }
+      - { label: Excerpt, name: excerpt, widget: text }
+      - { label: Content, name: body, widget: markdown }
       - label: "Categories"
         name: "categories"
         widget: "list"
@@ -160,11 +249,21 @@ collections: # A list of collections the CMS should be able to edit
         name: "meta"
         widget: "object"
         fields:
-          - {label: Title, name: title, widget: string, required: false}
-          - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-          - {label: Noindex, name: noindex, widget: boolean, required: false}
-
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: [".{,300}", "Must not exceed 300 characters"],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: postCategories
     label: Post Category
@@ -174,17 +273,27 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: Title, name: title, widget: string}
+      - { label: Title, name: title, widget: string }
       - label: "Meta"
         required: false
         name: "meta"
         widget: "object"
         fields:
-          - {label: Title, name: title, widget: string, required: false}
-          - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-          - {label: Noindex, name: noindex, widget: boolean, required: false}
-
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+              pattern: [".{,300}", "Must not exceed 300 characters"],
+            }
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: "settings"
     label: "Settings"
@@ -196,19 +305,64 @@ collections: # A list of collections the CMS should be able to edit
         label: "Global Settings"
         name: "global-settings"
         fields:
-          - {label: Site Title, name: siteTitle, widget: string}
-          - {label: Site Url, name: siteUrl, widget: string, required: false}
-          - {label: Site Description, name: siteDescription, widget: text, required: false}
+          - { label: Site Title, name: siteTitle, widget: string }
+          - { label: Site Url, name: siteUrl, widget: string, required: false }
+          - {
+              label: Site Description,
+              name: siteDescription,
+              widget: text,
+              required: false,
+            }
           - label: Social Media Card
             name: socialMediaCard
             widget: object
             fields:
-              - {label: Image, name: image, widget: image, required: false}
-              - {label: Twitter, name: twitter, widget: string, required: false}
-              - {label: Instagram, name: instagram, widget: string, required: false}
-              - {label: Facebook, name: facebook, widget: string, required: false}
-              - {label: VKontakte, name: vkontakte, widget: string, required: false}
-              - {label: WhatsApp, name: whatsapp, widget: string, required: false}
-              - {label: WhatsApp Message, name: whatsappMessage, widget: string, required: false}
-          - {label: Header Meta / Scripts, name: headerScripts, widget: text, required: false}
-          - {label: Enable Service Worker Pre-Cache, name: enableServiceWorker, widget: boolean, required: false}
+              - { label: Image, name: image, widget: image, required: false }
+              - {
+                  label: Twitter,
+                  name: twitter,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Instagram,
+                  name: instagram,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Facebook,
+                  name: facebook,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: VKontakte,
+                  name: vkontakte,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: WhatsApp,
+                  name: whatsapp,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: WhatsApp Message,
+                  name: whatsappMessage,
+                  widget: string,
+                  required: false,
+                }
+          - {
+              label: Header Meta / Scripts,
+              name: headerScripts,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Enable Service Worker Pre-Cache,
+              name: enableServiceWorker,
+              widget: boolean,
+              required: false,
+            }
