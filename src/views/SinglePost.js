@@ -4,11 +4,10 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import BackgroundImage from '../components/BackgroundImage'
-import { dateFormatted } from '../util/date'
 import './SinglePost.css'
 
 export default ({ fields, nextPostURL, prevPostURL }) => {
-  const { title, date, postFeaturedImage, body, categories = [] } = fields
+  const { title, postFeaturedImage, body = [] } = fields
   return (
     <article className='SinglePost section light'>
       {postFeaturedImage && (
@@ -24,20 +23,6 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
           <ChevronLeft /> Назад
         </Link>
         <div className='SinglePost--Content relative'>
-          <div className='SinglePost--Meta'>
-            {!!categories.length &&
-              categories.map(obj => (
-                <span key={obj.category} className='SinglePost--Meta--Category'>
-                  {obj.category}
-                </span>
-              ))}
-            {date && (
-              <span className='SinglePost--Meta--Date'>
-                {dateFormatted(date)}
-              </span>
-            )}
-          </div>
-
           {title && <h1 className='SinglePost--Title'>{title}</h1>}
 
           <div className='SinglePost--InnerContent'>
