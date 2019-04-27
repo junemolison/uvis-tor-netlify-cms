@@ -26,7 +26,9 @@ export default ({
         subtitle={subtitle}
         backgroundImage={featuredImage}
       />
-      <Content source={body} />
+      <div>
+        <Content source={body} />
+      </div>
       {!!postCategories.length && (
         <PostCategoriesNav categories={postCategories} />
       )}
