@@ -1,7 +1,7 @@
 ---
 title: Почему мы
 featuredImage: /images/uploads/2971833.jpeg
-subtitle: '1'
+subtitle: "1"
 benefits:
   - body: >-
       В настоящее время производство пеллет набирает всё большую популярность, в
@@ -31,4 +31,3 @@ benefits:
       свежескошенного Амаранта, что подтверждено сертификатом качества.
     image: /images/uploads/013-reliability.png
 ---
-Test123
