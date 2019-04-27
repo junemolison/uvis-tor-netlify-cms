@@ -15,12 +15,12 @@ export default ({ fields }) => {
         backgroundImage={featuredImage}
       />
       <div className='section'>
-        <Content source={body} />
         <div className='container'>
-          {benefits.map(({ image, benefits }, key) => (
+          <Content source={body} />
+          {benefits.map(({ image, benefit }, key) => (
             <div className='Benefit' key={`benefit-${key}`}>
               <LazyImage src={image} alt={`benifit-${key}`} />
-              <Content source={benefits} />
+              <Content source={benefit} />
             </div>
           ))}
         </div>
