@@ -125,7 +125,7 @@ collections: # A list of collections the CMS should be able to edit
             name: "benefits"
             widget: "list"
             fields:
-              - { label: Benefit, name: benefit, widget: markdown }
+              - { label: Benefit, name: body, widget: markdown }
               - { label: Image, name: image, widget: image }
 
   - name: equipments
