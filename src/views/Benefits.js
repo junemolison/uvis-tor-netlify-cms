@@ -15,9 +15,8 @@ export default ({ fields }) => {
         backgroundImage={featuredImage}
       />
       <div className='section'>
+        <Content source={body} />
         <div className='container'>
-          <Content source={body} />
-
           {benefits.map(({ image, benefit }, key) => (
             <div className='Benefit' key={`benefit-${key}`}>
               <LazyImage src={image} alt={`benifit-${key}`} />
