@@ -16,18 +16,14 @@ export default ({ fields }) => {
       />
       <div className='section'>
         <div className='container'>
-          <div>
-            <Content source={body} />
+          <Content source={body} />
 
-            <div className='Benefits--Details'>
-              {benefits.map(({ image, benefit }, key) => (
-                <div className='Benefit' key={`benefit-${key}`}>
-                  <LazyImage src={image} alt={`benifit-${key}`} />
-                  <Content source={benefit} />
-                </div>
-              ))}
+          {benefits.map(({ image, benefit }, key) => (
+            <div className='Benefit' key={`benefit-${key}`}>
+              <LazyImage src={image} alt={`benifit-${key}`} />
+              <Content source={benefit} />
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </main>
