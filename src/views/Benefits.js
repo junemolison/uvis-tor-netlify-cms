@@ -6,7 +6,7 @@ import LazyImage from '../components/LazyImage'
 import './Benefits.css'
 
 export default ({ fields }) => {
-  const { title, subtitle, featuredImage, benefits } = fields
+  const { title, subtitle, featuredImage, benefits, body } = fields
   return (
     <main className='Benefits'>
       <PageHeader
@@ -15,14 +15,12 @@ export default ({ fields }) => {
         backgroundImage={featuredImage}
       />
       <div className='section'>
+        <Content source={body} />
         <div className='container'>
-          {benefits.map(({ image, body }, key) => (
-            <div
-              className='Benefit'
-              key={`benefit-${key}`}
-            >
+          {benefits.map(({ image, benefit }, key) => (
+            <div className='Benefit' key={`benefit-${key}`}>
               <LazyImage src={image} alt={`benifit-${key}`} />
-              <Content source={body} />
+              <Content source={benefit} />
             </div>
           ))}
         </div>
