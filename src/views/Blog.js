@@ -1,5 +1,5 @@
 import React from 'react'
-import descend from 'nanoutils/cjs/descend'
+import ascend from 'nanoutils/cjs/ascend'
 import sortBy from 'nanoutils/cjs/sortBy'
 import prop from 'nanoutils/cjs/prop'
 
@@ -17,7 +17,7 @@ export default ({
   showFeatured = true
 }) => {
   const { title, subtitle, featuredImage, body } = fields
-  posts = sortBy(descend(prop('date')), posts)
+  posts = sortBy(ascend(prop('title')), posts)
 
   return (
     <main className='Blog'>
@@ -26,14 +26,17 @@ export default ({
         subtitle={subtitle}
         backgroundImage={featuredImage}
       />
-      <div>
-        <Content source={body} />
-      </div>
+
       {!!postCategories.length && (
         <PostCategoriesNav categories={postCategories} />
       )}
 
-      {!!posts.length && <PostSection posts={posts} />}
+      <div>
+        <div className='container'>
+          <Content source={body} />
+          {!!posts.length && <PostSection posts={posts} />}
+        </div>
+      </div>
     </main>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import descend from 'nanoutils/cjs/descend'
+import ascend from 'nanoutils/cjs/ascend'
 import prop from 'nanoutils/cjs/prop'
 import sortBy from 'nanoutils/cjs/sortBy'
 
@@ -30,13 +30,13 @@ class PostSection extends React.Component {
     const { posts, title, showLoadMore, loadMoreTitle } = this.props
     const { limit } = this.state
 
-    const visiblePosts = sortBy(descend(prop('date')), posts)
+    const visiblePosts = sortBy(ascend(prop('title')), posts)
       // show all unless you set a limit
       .slice(0, limit || posts.length)
 
     return (
       <div className='PostSection'>
-        <div className='container'>
+        <div className='container2'>
           {title && <h2 className='PostSection--Title'>{title}</h2>}
           {!!visiblePosts.length && (
             <div className='PostSection--Grid'>
@@ -45,8 +45,7 @@ class PostSection extends React.Component {
               ))}
             </div>
           )}
-          {showLoadMore &&
-            visiblePosts.length < posts.length && (
+          {showLoadMore && visiblePosts.length < posts.length && (
             <div className='taCenter'>
               <button className='button' onClick={this.increaseLimit}>
                 {loadMoreTitle}
