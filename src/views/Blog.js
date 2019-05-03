@@ -25,6 +25,7 @@ export default ({
         title={title}
         subtitle={subtitle}
         backgroundImage={featuredImage}
+        className='titleFix'
       />
 
       {!!postCategories.length && (
@@ -33,7 +34,7 @@ export default ({
 
       <div>
         <div className='container'>
-          <Content source={body} />
+          <Content source={body} className='text' />
           {!!posts.length && <PostSection posts={posts} />}
         </div>
       </div>
