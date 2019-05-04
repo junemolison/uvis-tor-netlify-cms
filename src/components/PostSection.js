@@ -1,5 +1,5 @@
 import React from 'react'
-import ascend from 'nanoutils/cjs/ascend'
+import { descend } from 'nanoutils/cjs/'
 import prop from 'nanoutils/cjs/prop'
 import sortBy from 'nanoutils/cjs/sortBy'
 
@@ -30,7 +30,7 @@ class PostSection extends React.Component {
     const { posts, title, showLoadMore, loadMoreTitle } = this.props
     const { limit } = this.state
 
-    const visiblePosts = sortBy(ascend(prop('title')), posts)
+    const visiblePosts = sortBy(descend(prop('date')), posts)
       // show all unless you set a limit
       .slice(0, limit || posts.length)
 
