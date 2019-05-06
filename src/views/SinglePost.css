@@ -1,6 +1,8 @@
 .SinglePost {
 }
-
+.Container--Post {
+  width: 100%;
+}
 .SinglePost--BackgroundImage {
   height: 50rem;
 }
@@ -29,7 +31,7 @@
 .SinglePost--Content {
   background: white;
   margin-top: 30rem;
-  padding: 8rem 8rem 4rem 8rem;
+  padding: 8rem 10rem 4rem 10rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -51,10 +53,11 @@
 .SinglePost--Title {
   text-align: center;
   line-height: 1.2;
+  margin-bottom: 8rem;
 }
 
 .SinglePost--InnerContent {
-  padding: 0 8rem;
+  padding: 0 4rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -64,7 +67,7 @@
 }
 
 .SinglePost--Pagination {
-  margin: 4rem 0 0 0;
+  margin: 8rem 0 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,4 +82,5 @@
 
 .SinglePost--Pagination--Link.next {
   margin-left: auto;
+  text-align: right;
 }

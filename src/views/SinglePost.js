@@ -18,7 +18,7 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
         />
       )}
 
-      <div className='container skinny'>
+      <div className='Container--Post'>
         <Link className='SinglePost--BackButton' to='/blog/'>
           <ChevronLeft /> Назад
         </Link>
