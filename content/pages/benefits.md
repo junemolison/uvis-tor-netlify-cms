@@ -1,6 +1,6 @@
 ---
 title: Почему мы
-featuredImage: /images/uploads/2971833.jpeg
+featuredImage: /images/uploads/hideframe_20170816_154141-2-.jpg
 benefits:
   - benefit: >-
       Наше главное правило – за весь процесс, от изготовления до запуска и
