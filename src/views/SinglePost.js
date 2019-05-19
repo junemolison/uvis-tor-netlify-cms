@@ -6,8 +6,10 @@ import Content from '../components/Content'
 import BackgroundImage from '../components/BackgroundImage'
 import './SinglePost.css'
 
+import Gallery from './GalleryEquipment'
+
 export default ({ fields, nextPostURL, prevPostURL }) => {
-  const { title, postFeaturedImage, body = [] } = fields
+  const { title, postFeaturedImage, body, photoGallery = [] } = fields
 
   return (
     <article className='SinglePost section light'>
@@ -24,11 +26,10 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
         </Link>
         <div className='SinglePost--Content relative'>
           {title && <h1 className='SinglePost--Title'>{title}</h1>}
-
+          {photoGallery.length > 0 && <Gallery fields={fields} />}
           <div className='SinglePost--InnerContent'>
             <Content source={body} />
           </div>
-
           <div className='SinglePost--Pagination'>
             {prevPostURL && (
               <Link
