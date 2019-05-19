@@ -1,7 +1,10 @@
 ---
 title: Галерея
-subtitle: '1'
-featuredImage: /images/uploads/2971833.jpeg
-photoGallery: []
+subtitle: ''
+featuredImage: ''
+photoGallery:
+  - images:
+      - /images/uploads/20170808_121158.jpg
+      - /images/uploads/20170820_182254.jpg
 ---
 
