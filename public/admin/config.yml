@@ -156,6 +156,15 @@ collections: # A list of collections the CMS should be able to edit
             collection: "equipmentCategories"
             searchFields: ["title"]
             valueField: "title"
+      - label: "Photo Gallery"
+        name: "photoGallery"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            field: { widget: image }
 
   - name: equipmentCategories
     label: Equipment Category
