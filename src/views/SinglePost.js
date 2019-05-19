@@ -8,6 +8,7 @@ import './SinglePost.css'
 
 export default ({ fields, nextPostURL, prevPostURL }) => {
   const { title, postFeaturedImage, body = [] } = fields
+  console.log(fields)
   return (
     <article className='SinglePost section light'>
       {postFeaturedImage && (
@@ -17,7 +18,6 @@ export default ({ fields, nextPostURL, prevPostURL }) => {
           alt={title}
         />
       )}
-
       <div className='Container--Post'>
         <Link className='SinglePost--BackButton' to='/blog/'>
           <ChevronLeft /> Назад

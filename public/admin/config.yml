@@ -58,15 +58,6 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
           - { label: Body, name: body, widget: markdown, required: false }
-          - label: "Photo Gallery"
-          name: "photoGallery"
-          widget: "list"
-          fields:
-            - { label: Title, name: title, widget: string }
-            - label: "Images"
-              name: "images"
-              widget: "list"
-              field: { widget: image }
 
       - file: "content/pages/gallery.md"
         label: "Gallery"
