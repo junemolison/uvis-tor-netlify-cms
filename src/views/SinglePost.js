@@ -9,20 +9,20 @@ import './SinglePost.css'
 import Gallery from './GalleryEquipment'
 
 export default ({ fields, nextPostURL, prevPostURL }) => {
-  const { title, postFeaturedImage, body, photoGallery = [] } = fields
+  const { title, equipmentFeaturedImage, body, photoGallery = [] } = fields
 
   return (
     <article className='SinglePost section light'>
-      {postFeaturedImage && (
+      {equipmentFeaturedImage && (
         <BackgroundImage
           className='SinglePost--BackgroundImage'
-          src={postFeaturedImage}
+          src={equipmentFeaturedImage}
           alt={title}
         />
       )}
       <div className='Container--Post'>
         <Link className='SinglePost--BackButton' to='/blog/'>
-          <ChevronLeft /> Назад
+          <ChevronLeft />
         </Link>
         <div className='SinglePost--Content relative'>
           {title && <h1 className='SinglePost--Title'>{title}</h1>}
