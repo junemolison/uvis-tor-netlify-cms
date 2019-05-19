@@ -8,7 +8,7 @@ import './SinglePost.css'
 
 export default ({ fields, nextPostURL, prevPostURL }) => {
   const { title, postFeaturedImage, body = [] } = fields
-  console.log(fields)
+
   return (
     <article className='SinglePost section light'>
       {postFeaturedImage && (
