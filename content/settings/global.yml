@@ -9,5 +9,17 @@ socialMediaCard:
   instagram: ''
   whatsapp: +38 (050) 202-43-20
   whatsappMessage: ''
-headerScripts: <!-- Add your analytics scripts / verification meta here -->
+headerScripts: >
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-149509637-1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149509637-1');
+  </script>
 enableServiceWorker: true
