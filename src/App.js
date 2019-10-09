@@ -1,23 +1,23 @@
-import React, { Component, Fragment } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Helmet from 'react-helmet'
-import includes from 'nanoutils/cjs/includes'
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import includes from 'nanoutils/cjs/includes';
 
-import ScrollToTop from './components/ScrollToTop'
-import Meta from './components/Meta'
-import Home from './views/Home'
-import Gallery from './views/Gallery'
-import Benefits from './views/Benefits'
-import Blog from './views/Blog'
-import SinglePost from './views/SinglePost'
-import Contact from './views/Contact'
-import NoMatch from './views/NoMatch'
-import Nav from './components/Nav'
-import Footer from './components/Footer'
-import ServiceWorkerNotifications from './components/ServiceWorkerNotifications'
-import data from './data.json'
-import { slugify } from './util/url'
-import { documentHasTerm, getCollectionTerms } from './util/collection'
+import ScrollToTop from './components/ScrollToTop';
+import Meta from './components/Meta';
+import Home from './views/Home';
+import Gallery from './views/Gallery';
+import Benefits from './views/Benefits';
+import Blog from './views/Blog';
+import SinglePost from './views/SinglePost';
+import Contact from './views/Contact';
+import NoMatch from './views/NoMatch';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import ServiceWorkerNotifications from './components/ServiceWorkerNotifications';
+import data from './data.json';
+import { slugify } from './util/url';
+import { documentHasTerm, getCollectionTerms } from './util/collection';
 
 const RouteWithMeta = ({ component: Component, ...props }) => (
   <Route
@@ -34,13 +34,13 @@ const RouteWithMeta = ({ component: Component, ...props }) => (
 class App extends Component {
   state = {
     data
-  }
+  };
 
   getDocument = (collection, name) =>
     this.state.data[collection] &&
-    this.state.data[collection].filter(page => page.name === name)[0]
+    this.state.data[collection].filter(page => page.name === name)[0];
 
-  getDocuments = collection => this.state.data[collection] || []
+  getDocuments = collection => this.state.data[collection] || [];
 
   render () {
     const globalSettings = this.getDocument('settings', 'global')
@@ -76,12 +76,13 @@ class App extends Component {
               socialMediaCard.image &&
               siteUrl + socialMediaCard.image
             }
-            twitter={
-              socialMediaCard && socialMediaCard.twitter
-            }
+            twitter={socialMediaCard && socialMediaCard.twitter}
           />
 
           <Nav />
+          <a href='tel:380505658067'>
+            <img src={'/images/call-icon.svg'} className='phoneIcon' />
+          </a>
 
           <Switch>
             <RouteWithMeta

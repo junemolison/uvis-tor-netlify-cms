@@ -1,8 +1,6 @@
-import React from 'react'
-
-import Logo from './Logo'
-
-import './Footer.css'
+import React from 'react';
+import Logo from './Logo';
+import './Footer.css';
 
 const removeAtSign = str => str.slice(1)
 const removeNonNumbers = str => str.replace(/[^\w]/g, '')
@@ -10,14 +8,13 @@ const removeNonNumbers = str => str.replace(/[^\w]/g, '')
 class LogoLink extends React.Component {
   state = {
     hover: false
-  }
+  };
 
   render () {
     const { hover } = this.state
     const { alt, className, href } = this.props
 
     if (hover) {
-
     }
 
     return (
@@ -33,8 +30,14 @@ class LogoLink extends React.Component {
         onMouseLeave={() => this.setState({ hover: false })}
       >
         <React.Fragment>
-          <Logo className={!hover ? 'hovered' : 'not_hovered'} src={this.props.logo} />
-          <Logo className={hover ? 'idle' : 'not_idle'} src={this.props.hoverLogo} />
+          <Logo
+            className={!hover ? 'hovered' : 'not_hovered'}
+            src={this.props.logo}
+          />
+          <Logo
+            className={hover ? 'idle' : 'not_idle'}
+            src={this.props.hoverLogo}
+          />
         </React.Fragment>
       </a>
     )
@@ -42,11 +45,18 @@ class LogoLink extends React.Component {
 }
 
 export default ({ globalSettings, socialMediaCard, navLinks }) => {
-  const { twitter, facebook, instagram, vkontakte, whatsapp, whatsappMessage } = socialMediaCard
+  const {
+    twitter,
+    facebook,
+    instagram,
+    vkontakte,
+    whatsapp,
+    whatsappMessage
+  } = socialMediaCard
 
   const textToWhatsApp = whatsappMessage
     ? `?text=${encodeURI(whatsappMessage)}`
-    : ''
+    : '';
 
   return (
     <footer className='Footer'>
@@ -92,22 +102,16 @@ export default ({ globalSettings, socialMediaCard, navLinks }) => {
             <LogoLink
               alt='Link to WhatsApp'
               className='Link Link--WhatsApp'
-              href={`https://wa.me/${removeNonNumbers(whatsapp)}${textToWhatsApp}`}
+              href={`https://wa.me/${removeNonNumbers(
+                whatsapp
+              )}${textToWhatsApp}`}
               logo='/images/wa.svg'
               hoverLogo='/images/wa-hover.svg'
             />
           )}
         </div>
         <span>© 2019 Все права защищены</span>
-        <div className='Footer--License'>
-          Icons made by
-          <a alt='Link to Freepik' href='http://www.freepik.com' title='Freepik'>Freepik</a>
-          from
-          <a alt='Link to Flaticon' href='https://www.flaticon.com/' title='Flaticon'>www.flaticon.com</a>
-          is licensed by
-          <a alt='Link to a License' href='http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0' rel='noopener noreferrer' target='_blank'>CC 3.0 BY</a>
-        </div>
       </div>
     </footer>
   )
-}
+};
