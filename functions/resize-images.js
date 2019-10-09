@@ -13,7 +13,18 @@ const options = {
   inputDir: './public/images/uploads',
   outputDir: './public/images/uploads/resized',
   sizes,
-  imageFormats: ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF', 'webp', 'WEBP']
+  imageFormats: [
+    'jpg',
+    'JPG',
+    'jpeg',
+    'JPEG',
+    'png',
+    'PNG',
+    'gif',
+    'GIF',
+    'webp',
+    'WEBP'
+  ]
 }
 
 const saveImage = ({ buffer, size, outputFile }) => {
@@ -21,7 +32,6 @@ const saveImage = ({ buffer, size, outputFile }) => {
     sharp(buffer)
       .resize(size)
       .rotate()
-      .withoutEnlargement()
       .toFile(outputFile, err => {
         if (err) {
           return reject(err)
@@ -30,7 +40,7 @@ const saveImage = ({ buffer, size, outputFile }) => {
         }
       })
   })
-}
+};
 
 const saveImages = ({ buffer, filename }) => {
   console.log(`🎞  Processing ${filename}`)
@@ -47,7 +57,7 @@ const saveImages = ({ buffer, filename }) => {
       return saveImage({ buffer, size, outputFile })
     })
   )
-}
+};
 
 const readFiles = files =>
   Promise.all(
