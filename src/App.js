@@ -80,8 +80,12 @@ class App extends Component {
           />
 
           <Nav />
-          <a href='tel:380505658067'>
-            <img src={'/images/call-icon.svg'} className='phoneIcon' />
+          <a href='tel:+380505658067'>
+            <img
+              src={'/images/call-icon.svg'}
+              className='phoneIcon'
+              alt='phone'
+            />
           </a>
 
           <Switch>

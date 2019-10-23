@@ -11,6 +11,60 @@
   height: 6rem;
 }
 
+.Nav--SubHeader {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  max-width: 1105px;
+}
+
+.Nav--Telephone svg {
+  margin-right: 1rem;
+  color: var(--primary);
+  height: 22px;
+  width: 22px;
+}
+
+.Nav--Telephone {
+  float: left;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.Nav--Telephone span {
+  font-size: 18px;
+}
+
+.Nav--Mail {
+  float: left;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.Nav--Mail a {
+  display: flex;
+  color: var(--secondary);
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+}
+
+.Nav--Mail a:hover {
+  color: var(--primary);
+}
+
+.Nav--Mail svg {
+  margin-right: 1rem;
+  color: var(--primary);
+  height: 22px;
+  width: 22px;
+}
+
 .Nav--Container .Nav--Sandwich {
   display: none;
 }
@@ -34,7 +88,8 @@
 }
 
 .Nav--Drawer .NavLink {
-  margin: 0.5rem 4rem;
+  margin: 0;
+  padding: 0.8rem 0;
   text-align: center;
 }
 
@@ -46,6 +101,27 @@
   margin-right: 3rem;
 }
 
+@media screen and (max-width: 450px) {
+  .Nav--SubHeader {
+    display: none;
+  }
+  .Nav--Telephone {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 3rem;
+    padding: 3rem 2rem 2rem 2rem;
+  }
+  .Nav--Mail {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .Nav--Container .Nav--Sandwich {
     display: block;

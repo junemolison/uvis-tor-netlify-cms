@@ -1,13 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Drawer from '@material-ui/core/Drawer'
-import Divider from '@material-ui/core/Divider'
+import Drawer from '@material-ui/core/Drawer';
+import Divider from '@material-ui/core/Divider';
 
-import Logo from './Logo'
-import NavLink from './NavLink'
-import Sandwich from './Sandwich'
-import './Nav.css'
+import Logo from './Logo';
+import NavLink from './NavLink';
+import Sandwich from './Sandwich';
+import './Nav.css';
+import { Phone, Mail } from 'react-feather';
 
 const AccessibleLink = ({ alt, children, ...props }) => (
   <Link alt={alt} aria-label={alt} {...props}>
@@ -18,17 +19,32 @@ const AccessibleLink = ({ alt, children, ...props }) => (
 export default class Nav extends React.Component {
   state = {
     open: false
-  }
+  };
 
-  handleOpen = () => this.setState({ open: true })
+  handleOpen = () => this.setState({ open: true });
 
-  handleClose = () => this.setState({ open: false })
+  handleClose = () => this.setState({ open: false });
 
   render () {
     const { open } = this.state
 
     return (
       <nav className='Nav'>
+        <div className='Nav--SubHeader'>
+          <div className='Nav--Telephone'>
+            <Phone />
+            <div>
+              +38 (050)&nbsp;
+              <span>565-80-67</span>
+            </div>
+          </div>
+          <div className='Nav--Mail'>
+            <a href='mailto:uvistor@gmail.com'>
+              <Mail />
+              uvistor@gmail.com
+            </a>
+          </div>
+        </div>
         <div className='Nav--Container container'>
           <Sandwich handleOpen={this.handleOpen} />
           <AccessibleLink alt='Link to Home' className='Link' to='/'>
@@ -80,6 +96,19 @@ export default class Nav extends React.Component {
             Галерея
           </NavLink>
           <Divider />
+          <div className='Nav--Telephone'>
+            <Phone />
+            <div>
+              +38 (050)&nbsp;
+              <span>565-80-67</span>
+            </div>
+          </div>
+          <div className='Nav--Mail'>
+            <a href='mailto:uvistor@gmail.com'>
+              <Mail />
+              uvistor@gmail.com
+            </a>
+          </div>
         </Drawer>
       </nav>
     )
