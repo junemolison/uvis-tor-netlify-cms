@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import Content from '../components/Content';
-import PageHeader from '../components/PageHeader';
-import './Home.css';
+import Content from '../components/Content'
+import PageHeader from '../components/PageHeader'
+import './Home.css'
 
 export default ({ fields }) => {
   const { title, subtitle, featuredImage, body } = fields
@@ -22,4 +22,4 @@ export default ({ fields }) => {
       </div>
     </main>
   )
-};
+}

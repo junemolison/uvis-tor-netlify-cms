@@ -40,7 +40,7 @@ const saveImage = ({ buffer, size, outputFile }) => {
         }
       })
   })
-};
+}
 
 const saveImages = ({ buffer, filename }) => {
   console.log(`🎞  Processing ${filename}`)
@@ -57,7 +57,7 @@ const saveImages = ({ buffer, filename }) => {
       return saveImage({ buffer, size, outputFile })
     })
   )
-};
+}
 
 const readFiles = files =>
   Promise.all(
