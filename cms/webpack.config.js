@@ -3,18 +3,9 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const production = process.env.NODE_ENV === 'production'
-
-console.log(`Building CMS in ${production ? 'production' : 'development'} mode`)
-
-const productionPlugins = production
-  ? [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new webpack.optimize.UglifyJsPlugin()
-  ]
-  : []
+const production = process.env.NODE_ENV === 'production';
+const mode = production ? 'production' : 'development';
+console.log(`Building CMS in ${mode} mode`)
 
 module.exports = {
   entry: './cms.js',
@@ -22,6 +13,7 @@ module.exports = {
     filename: 'cms.bundle.js',
     path: path.resolve(__dirname, '../public/admin/')
   },
+  mode,
   stats: { warnings: false, children: false },
   module: {
     rules: [
@@ -30,10 +22,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
-          presets: ['babel-preset-env', 'babel-preset-react'],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: [
-            'babel-plugin-transform-class-properties',
-            'transform-object-rest-spread'
+            '@babel/plugin-proposal-object-rest-spread',
+            '@babel/plugin-proposal-class-properties'
           ]
         }
       },
@@ -51,7 +43,6 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin({
       filename: 'cms.bundle.css'
-    }),
-    ...productionPlugins
+    })
   ]
 }
