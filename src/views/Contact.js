@@ -1,10 +1,10 @@
-import React from 'react';
-import { MapPin, Smartphone, Mail } from 'react-feather';
+import React from 'react'
+import { MapPin, Smartphone, Mail } from 'react-feather'
 
-import PageHeader from '../components/PageHeader';
-import EnquiryFormSimpleAjax from '../components/EnquiryFormSimpleAjax';
-import Content from '../components/Content';
-import './Contact.css';
+import PageHeader from '../components/PageHeader'
+import EnquiryFormSimpleAjax from '../components/EnquiryFormSimpleAjax'
+import Content from '../components/Content'
+import './Contact.css'
 
 export default ({ fields }) => {
   const { body, title, subtitle, featuredImage, addresses, email } = fields
@@ -62,4 +62,4 @@ export default ({ fields }) => {
       </div>
     </div>
   )
-};
+}
