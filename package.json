@@ -59,7 +59,7 @@
     "start:cms": "chokidar 'cms/cms.js' -c 'cd cms && yarn build'",
     "build": "npm-run-all -s prepare-content build:cms build:app build:postcss build:react-snapshot build:sitemap build:sw build:sha",
     "build:app": "react-scripts build",
-    "build:cms": "cd cms && SET NODE_ENV=production yarn build",
+    "build:cms": "cd cms && NODE_ENV=production yarn build",
     "build:postcss": "postcss build/static/css/*.css -r",
     "build:react-snapshot": "react-snapshot",
     "build:sw": "sw-precache --config=sw-precache-config.js",
