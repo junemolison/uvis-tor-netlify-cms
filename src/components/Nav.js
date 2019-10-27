@@ -33,10 +33,7 @@ export default class Nav extends React.Component {
         <div className='Nav--SubHeader'>
           <div className='Nav--Telephone'>
             <Phone />
-            <div>
-              +38 (050)&nbsp;
-              <span>565-80-67</span>
-            </div>
+            <span>+38 (050) 565-80-67</span>
           </div>
           <div className='Nav--Mail'>
             <a href='mailto:uvistor@gmail.com'>
@@ -98,10 +95,7 @@ export default class Nav extends React.Component {
           <Divider />
           <div className='Nav--Telephone'>
             <Phone />
-            <div>
-              +38 (050)&nbsp;
-              <span>565-80-67</span>
-            </div>
+            <div>+38 (050) 565-80-67</div>
           </div>
           <div className='Nav--Mail'>
             <a href='mailto:uvistor@gmail.com'>
